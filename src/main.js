@@ -1,4 +1,4 @@
 import './index.html';
-import testModule from './scripts/module-a';
-
-testModule.test();
+import 'skeleton-css/css/skeleton.css';
+import test from './scripts/templates';
+test.init();
