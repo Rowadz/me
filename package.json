@@ -53,6 +53,7 @@
         "url": "https://github.com/piecioshka/boilerplate-babel-webpack"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.13.0",
         "lit-html": "^1.2.1",
         "p5": "^1.0.0",
         "skeleton-css": "^2.0.4",

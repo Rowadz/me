@@ -1,6 +1,10 @@
 import './index.html';
 import './scss/index.scss';
 import 'skeleton-css/css/skeleton.css';
-import test from './templates/main.template';
+import name from './templates/main.template';
 import './templates/p5/intro.p5';
-test.init();
+import disaplyLinks from './templates/linksSection/links.template';
+import disaplySkills from './templates/skillsSection/skills.template';
+name.displayName();
+disaplyLinks();
+disaplySkills();

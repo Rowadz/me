@@ -1,6 +1,6 @@
 import { html, render } from 'lit-html';
 const mainSection = document.getElementById('main');
-const test = (name) => html` <h1>Rowad</h1> `;
-render(test('World'), mainSection);
+const name = (name) => html` <h1>${name}</h1> `;
+render(name('Rowad'), mainSection);
 
-export default { init: test };
+export default { displayName: name };
