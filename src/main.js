@@ -5,6 +5,8 @@ import name from './templates/main.template';
 import './templates/p5/intro.p5';
 import disaplyLinks from './templates/linksSection/links.template';
 import disaplySkills from './templates/skillsSection/skills.template';
+import displayGitHubSection from './templates/githubSection/githubSection.template';
 name.displayName();
 disaplyLinks();
 disaplySkills();
+displayGitHubSection();
