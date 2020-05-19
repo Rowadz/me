@@ -38,9 +38,11 @@ const skills = icons.map(
 
 const disaplySkills = () => html`
   <div class="row p">
-    <p class="center">
+    <h1 class="center">
+      <i class="fas fa-hands"></i>
       some of the things that I worked with & "font awesome" have icons for :)
-    </p>
+      <i class="fas fa-hands"></i>
+    </h1>
     ${skills}
   </div>
 `;
