@@ -2,7 +2,7 @@
 
 body,
 html {
-  //   background-color: $main-bg;
+  background-color: $main-bg;
   color: $main-color !important;
   overflow-x: hidden !important;
   padding: 0;
@@ -13,6 +13,9 @@ html {
 #main {
   min-height: 100vh;
   max-width: 100vw;
+  h1 {
+    z-index: 1;
+  }
 }
 
 .info,

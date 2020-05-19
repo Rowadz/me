@@ -15,7 +15,7 @@ let s = (sk) => {
     const canves = sk.createCanvas(innerWidth, innerHeight);
     sk.background('#0e0e0e');
     canves.position(0, 0);
-    canves.style('z-index', '-1');
+    // canves.style('z-index', '-1');
     cols = sk.floor(innerWidth / scl);
     rows = sk.floor(innerHeight / scl);
     flowfield = new Array(cols * rows);
