@@ -26,7 +26,11 @@ const links = icons.map(
 
 const disaplyLinks = () => html`
   <div class="row p">
-    <h1 class="center">Links</h1>
+    <h1 class="center">
+      <i class="fas fa-link"></i>
+      Links
+      <i class="fas fa-link"></i>
+    </h1>
     ${links}
   </div>
 `;
