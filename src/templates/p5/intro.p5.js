@@ -1,6 +1,7 @@
 import * as p5 from 'p5';
 import { Vector } from 'p5';
 import { Particle } from './Particle.p5';
+import { sexyBlack } from '../colorsHelper/colors.helper';
 
 let s = (sk) => {
   const scl = 10;
@@ -13,7 +14,7 @@ let s = (sk) => {
   sk.setup = () => {
     const { innerHeight, innerWidth } = window;
     const canves = sk.createCanvas(innerWidth, innerHeight);
-    sk.background('#0e0e0e');
+    sk.background(sexyBlack);
     canves.position(0, 0);
     // canves.style('z-index', '-1');
     cols = sk.floor(innerWidth / scl);

@@ -2,6 +2,7 @@ import * as echarts from 'echarts';
 import 'echarts-wordcloud';
 // dark-fresh-cut
 import 'echarts/theme/dark-mushroom';
+import { sexyRed } from '../colorsHelper/colors.helper';
 const mapToArea = (data) => {
   const set = new Set();
   const map = new Map();
@@ -55,7 +56,7 @@ export const createReposByYears = (data) => {
         data: dataToViz,
         type: 'line',
         smooth: true,
-        areaStyle: { color: '#a41304' },
+        areaStyle: { color: sexyRed },
         // lineStyle: { color: '#a41304' },
       },
     ],

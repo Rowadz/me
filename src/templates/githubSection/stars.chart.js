@@ -36,9 +36,7 @@ export const createStarsByRepChart = (data) => {
       orient: 'vertical',
       right: 10,
       top: 20,
-      textStyle: {
-        color: '#fff',
-      },
+
       bottom: 20,
       data: data.legendData,
       selected: data.selected,
