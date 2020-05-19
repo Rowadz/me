@@ -42,7 +42,9 @@ const icons = [
 ];
 const skills = icons.map(
   ({ icon, link }) => html`<div class="one columns center">
-    <a href="${link}" target="_blank"><i class="fab fa-${icon} fa-5x"></i></a>
+    <a href="${link}" target="_blank" class="hvr-bounce-out"
+      ><i class="fab fa-${icon} fa-5x"></i
+    ></a>
   </div>`
 );
 

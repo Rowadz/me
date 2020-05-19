@@ -18,7 +18,7 @@ const icons = [
 ];
 const links = icons.map(
   ({ icon, link }) => html`<div class="two columns center">
-    <a href="${link}" target="_blank">
+    <a href="${link}" target="_blank" class="hvr-bounce-out">
       <i class="fab fa-${icon} fa-10x"></i>
     </a>
   </div>`
