@@ -9,15 +9,13 @@ let s = (sk) => {
     zoff = 0,
     flowfield = [],
     inc = 0.1,
-    particles = [],
-    fr;
+    particles = [];
   sk.setup = () => {
     const { innerHeight, innerWidth } = window;
     const canves = sk.createCanvas(innerWidth, innerHeight);
     sk.background('#0e0e0e');
     canves.position(0, 0);
     canves.style('z-index', '-1');
-    fr = sk.createP('');
     cols = sk.floor(innerWidth / scl);
     rows = sk.floor(innerHeight / scl);
     flowfield = new Array(cols * rows);

@@ -5,4 +5,25 @@ html {
   //   background-color: $main-bg;
   color: $main-color !important;
   overflow-x: hidden !important;
+  padding: 0;
+  margin: 0;
+  font-family: 'Abril Fatface', cursive !important;
+}
+
+#links,
+#main {
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+#links {
+  background-color: $main-bg;
+}
+
+#main {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
