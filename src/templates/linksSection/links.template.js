@@ -14,12 +14,13 @@ const icons = [
     link: 'https://stackoverflow.com/users/10368302/rowad',
   },
   { icon: 'medium', link: 'https://medium.com/@mohammedalrowad' },
+  { icon: 'lemon', link: 'https://leetcode.com/rowadwo/', preFix: 'fas' },
   { icon: 'hackerrank', link: 'https://www.hackerrank.com/rowad' },
 ];
 const links = icons.map(
-  ({ icon, link }) => html`<div class="two columns center">
+  ({ icon, link, preFix }) => html`<div class="two columns center">
     <a href="${link}" target="_blank" class="hvr-bounce-out">
-      <i class="fab fa-${icon} fa-10x"></i>
+      <i class="${preFix ? preFix : 'fab'} fa-${icon} fa-10x"></i>
     </a>
   </div>`
 );
