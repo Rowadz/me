@@ -6,3 +6,4 @@ import './templates/p5/intro.p5';
 import './templates/linksSection/links.template';
 import './templates/skillsSection/skills.template';
 import './templates/githubSection/githubSection.template';
+// import './templates/selectedProject/selectedProject.template';

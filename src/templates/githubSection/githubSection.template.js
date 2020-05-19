@@ -7,9 +7,9 @@ import { createStarsByRepChart } from './stars.chart';
 const displayGitHubSection = () => html`
   <div class="row p">
     <h1 class="center">
-      <i class="fab fa-github-alt"></i>
+      <i class="fab fa-github-alt icon-header"></i>
       GitHub Summary Data
-      <i class="fab fa-github-alt"></i>
+      <i class="fab fa-github-alt icon-header"></i>
     </h1>
     <!--<div class="twelve columns center">
       <div id="active-repos-chart" class="chart"></div>

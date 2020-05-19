@@ -5,11 +5,10 @@ const selectedProjectsSection = document.getElementById('selected-projects');
 const disaplySelectedProjects = () => html`
   <div class="row p">
     <h1 class="center">
-      <i class="fas fa-hands"></i>
-      some of the things that I worked with & "font awesome" have icons for :)
-      <i class="fas fa-hands"></i>
+      <i class="fas fa-hands icon-header"></i>
+      Some Personal Selected Projects
+      <i class="fas fa-hands icon-header"></i>
     </h1>
-    ${skills}
   </div>
 `;
 

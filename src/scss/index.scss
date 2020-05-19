@@ -14,6 +14,10 @@ html {
   }
 }
 
+.icon-header {
+  color: $sexy-icon-color;
+}
+
 #main {
   min-height: 100vh;
   max-width: 100vw;
@@ -25,9 +29,6 @@ html {
 .info,
 #skills {
   background-color: $main-bg;
-  .fa-hands {
-    color: $sexy-icon-color;
-  }
   a {
     color: $sexy-red;
     &:hover {
@@ -36,16 +37,7 @@ html {
   }
 }
 
-#links {
-  .fa-link {
-    color: $sexy-icon-color;
-  }
-}
-
 #github-data {
-  .fa-github-alt {
-    color: $sexy-icon-color;
-  }
   .chart {
     height: 500px;
     width: 100%;
