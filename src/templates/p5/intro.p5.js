@@ -39,7 +39,6 @@ let s = (sk) => {
         flowfield[index] = v;
         xoff += inc;
         sk.stroke(2, 50);
-        sk.stroke('#A41304');
         // sk.push();
         // sk.translate(x * scl, y * scl);
         // sk.rotate(v.heading());

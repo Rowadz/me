@@ -12,8 +12,8 @@ export class Particle {
     );
     this.vel = this.p5.createVector(0, 0);
     this.acc = this.p5.createVector(0, 0);
-    this.maxspeed = 100;
-    this.h = 10;
+    this.maxspeed = 4;
+    this.h = 0;
     this.prevPos = this.pos.copy();
   }
   update() {
