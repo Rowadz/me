@@ -8,6 +8,10 @@ html {
   padding: 0;
   margin: 0;
   font-family: 'Abril Fatface', cursive !important;
+  ::selection {
+    color: $main-bg;
+    background-color: $sexy-red;
+  }
 }
 
 #main {
@@ -21,6 +25,9 @@ html {
 .info,
 #skills {
   background-color: $main-bg;
+  .fa-hands {
+    color: $sexy-icon-color;
+  }
   a {
     color: $sexy-red;
     &:hover {
@@ -29,9 +36,15 @@ html {
   }
 }
 
+#links {
+  .fa-link {
+    color: $sexy-icon-color;
+  }
+}
+
 #github-data {
   .fa-github-alt {
-    color: $sexy-blue;
+    color: $sexy-icon-color;
   }
   .chart {
     height: 500px;
