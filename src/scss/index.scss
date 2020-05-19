@@ -22,16 +22,16 @@ html {
 #skills {
   background-color: $main-bg;
   a {
-    color: #a41304;
+    color: $sexy-red;
     &:hover {
-      color: #f3f2f0;
+      color: $main-color;
     }
   }
 }
 
 #github-data {
   .fa-github-alt {
-    color: #2e4f6b;
+    color: $sexy-blue;
   }
   .chart {
     height: 500px;
