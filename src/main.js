@@ -1,12 +1,8 @@
 import './index.html';
 import './scss/index.scss';
 import 'skeleton-css/css/skeleton.css';
-import name from './templates/main.template';
+import './templates/main.template';
 import './templates/p5/intro.p5';
-import disaplyLinks from './templates/linksSection/links.template';
-import disaplySkills from './templates/skillsSection/skills.template';
-import displayGitHubSection from './templates/githubSection/githubSection.template';
-name.displayName();
-disaplyLinks();
-disaplySkills();
-displayGitHubSection();
+import './templates/linksSection/links.template';
+import './templates/skillsSection/skills.template';
+import './templates/githubSection/githubSection.template';
