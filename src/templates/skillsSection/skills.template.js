@@ -32,13 +32,15 @@ const icons = [
 ];
 const skills = icons.map(
   (icon) => html`<div class="one columns center">
-    <i class="fab fa-${icon} fa-5x"></i>
+    <a href="#"><i class="fab fa-${icon} fa-5x"></i></a>
   </div>`
 );
 
 const disaplySkills = () => html`
   <div class="row p">
-    <h4 class="center">My skills that font-awesome have icons for :)</h4>
+    <p class="center">
+      some of the things that I worked with & "font awesome" have icons for :)
+    </p>
     ${skills}
   </div>
 `;

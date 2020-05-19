@@ -18,6 +18,12 @@ html {
 #links,
 #skills {
   background-color: $main-bg;
+  a {
+    color: #a41304;
+    &:hover {
+      color: #f3f2f0;
+    }
+  }
 }
 
 .p {
