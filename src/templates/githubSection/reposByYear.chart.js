@@ -12,7 +12,6 @@ const mapToArea = (data) => {
     map.set(year, (map.get(year) || 0) + 1);
   });
   const dataToViz = years.map((year) => map.get(year));
-  console.log({ years, dataToViz });
   return { years, dataToViz };
 };
 
