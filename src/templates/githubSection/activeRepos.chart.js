@@ -27,7 +27,13 @@ const colors = [
   '#730217',
   '#BF3B5E',
 ];
-export const createActiveReposCharts = () => {
+export const createActiveReposCharts = (data) => {
+  const mapWordcloudData = (data = []) =>
+    data.map(({ name, html_url }) => ({
+      name,
+      value: 1,
+      html_url,
+    }));
   const chart = echarts.init(
     document.getElementById('active-repos-chart'),
     'dark-mushroom',
@@ -37,6 +43,10 @@ export const createActiveReposCharts = () => {
   );
   chart.setOption({
     backgroundColor: 'transparent',
+    title: {
+      text: 'Repositories',
+      left: 'center',
+    },
     series: [
       {
         type: 'wordCloud',
@@ -46,7 +56,7 @@ export const createActiveReposCharts = () => {
         // cardioid (apple or heart shape curve, the most known polar equation), diamond (
         // alias of square), triangle-forward, triangle, (alias of triangle-upright, pentagon, and star.
 
-        shape: 'circle',
+        shape: 'diamond',
 
         // A silhouette image which the white area will be excluded from drawing texts.
         // The shape option will continue to apply as the shape of the cloud to grow.
@@ -56,17 +66,17 @@ export const createActiveReposCharts = () => {
         // Folllowing left/top/width/height/right/bottom are used for positioning the word cloud
         // Default to be put in the center and has 75% x 80% size.
 
-        left: 'center',
-        top: 'center',
-        width: '70%',
-        height: '80%',
-        right: null,
-        bottom: null,
+        // left: 'center',
+        // top: 'center',
+        width: '100%',
+        height: '100%',
+        // right: null,
+        // bottom: null,
 
         // Text size range which the value in data will be mapped to.
         // Default to have minimum 12px and maximum 60px size.
 
-        sizeRange: [12, 60],
+        // sizeRange: [12, 60],
 
         // Text rotation range and step in degree. Text will be rotated randomly in range [-90, 90] by rotationStep 45
 
@@ -76,7 +86,7 @@ export const createActiveReposCharts = () => {
         // size of the grid in pixels for marking the availability of the canvas
         // the larger the grid size, the bigger the gap between words.
 
-        gridSize: 8,
+        // gridSize: 8,
 
         // set to true to allow word being draw partly outside of the canvas.
         // Allow word bigger than the size of the canvas to be drawn
@@ -97,62 +107,7 @@ export const createActiveReposCharts = () => {
         },
 
         // Data is an array. Each array item must have name and value property.
-        data: [
-          {
-            name: 'Farrah Abraham',
-            value: 366,
-            // Style of single text
-            textStyle: {
-              normal: {},
-              emphasis: {},
-            },
-          },
-          {
-            name: 'rowad',
-            value: 134,
-            // Style of single text
-            textStyle: {
-              normal: {},
-              emphasis: {},
-            },
-          },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-          { name: 'sarah', value: 439 },
-        ],
+        data: mapWordcloudData(data),
       },
     ],
   });

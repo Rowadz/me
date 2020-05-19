@@ -2,7 +2,22 @@ import * as echarts from 'echarts';
 import 'echarts-wordcloud';
 // dark-fresh-cut
 import 'echarts/theme/dark-mushroom';
-export const createReposByYears = () => {
+const mapToArea = (data) => {
+  const set = new Set();
+  const map = new Map();
+  data.forEach(({ created_at }) => set.add(new Date(created_at).getFullYear()));
+  const years = Array.from(set).sort((a, b) => a - b);
+  data.forEach(({ created_at }) => {
+    const year = new Date(created_at).getFullYear();
+    map.set(year, (map.get(year) || 0) + 1);
+  });
+  const dataToViz = years.map((year) => map.get(year));
+  console.log({ years, dataToViz });
+  return { years, dataToViz };
+};
+
+export const createReposByYears = (data) => {
+  const { dataToViz, years } = mapToArea(data);
   const chart = echarts.init(
     document.getElementById('repos-by-years'),
     'dark-mushroom',
@@ -16,23 +31,33 @@ export const createReposByYears = () => {
       left: 'center',
     },
     tooltip: {
-      show: true,
+      trigger: 'axis',
+      axisPointer: {
+        animation: true,
+      },
+      formatter: ([{ value, name }]) => {
+        const colorSpan =
+          '<span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:#a41304"></span>';
+        return `${colorSpan} created <b>${value}</b> repos in ${name}`;
+      },
     },
     animation: false,
     backgroundColor: 'transparent',
     xAxis: {
       type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      data: years,
     },
     yAxis: {
       type: 'value',
+      boundaryGap: false,
     },
     series: [
       {
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        data: dataToViz,
         type: 'line',
         smooth: true,
-        lineStyle: { color: '#a41304' },
+        areaStyle: { color: '#a41304' },
+        // lineStyle: { color: '#a41304' },
       },
     ],
   });
