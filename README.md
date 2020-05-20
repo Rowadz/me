@@ -2,5 +2,4 @@
 
 This is my personal portfolio -> [link](https://mohammedal-rowad.github.io/me/)
 
-
-<img src="./screenshot.png" />
+<img src="./screenshot2.png" />
