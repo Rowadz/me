@@ -52,7 +52,7 @@ const disaplySkills = () => html`
   <div class="row p">
     <h1 class="center">
       <i class="fas fa-hands icon-header"></i>
-      some of the things that I worked with & "font awesome" have icons for :)
+      Icons for some of the things that I worked with
       <i class="fas fa-hands icon-header"></i>
     </h1>
     ${skills}
