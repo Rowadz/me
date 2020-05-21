@@ -2,4 +2,4 @@
 
 This is my personal portfolio -> [link](https://mohammedal-rowad.github.io/me/)
 
-<img src="./screenshot2.png" />
+<img src="./Whaddaya-Think.png" />
