@@ -10,6 +10,8 @@ const mapPieData = (data = []) =>
       created_at,
     }))
     .filter(({ value }) => value > 0);
+const checkIfMobile = () =>
+  /Mobi/.test(navigator.userAgent) || /Mobi|Android/i.test(navigator.userAgent);
 
 export const createStarsByRepChart = (data) => {
   const chart = echarts.init(
@@ -22,7 +24,7 @@ export const createStarsByRepChart = (data) => {
   chart.setOption({
     backgroundColor: 'transparent',
     title: {
-      text: 'Star By Repository',
+      text: 'Stars By Repository',
       subtext: '"small partition"',
       left: 'center',
     },
@@ -32,11 +34,10 @@ export const createStarsByRepChart = (data) => {
     },
     legend: {
       type: 'scroll',
-      show: false,
-      orient: 'vertical',
-      right: 10,
-      top: 20,
-
+      show: checkIfMobile(),
+      orient: 'horizontal',
+      right: checkIfMobile() ? null : 10,
+      top: checkIfMobile() ? null : 20,
       bottom: 20,
       data: data.legendData,
       selected: data.selected,
@@ -45,7 +46,10 @@ export const createStarsByRepChart = (data) => {
       {
         name: 'Stars:',
         type: 'pie',
-        // radius: '55%',
+        label: {
+          show: !checkIfMobile(),
+        },
+        radius: checkIfMobile() ? '100%' : '75%',
         // center: ['40%', '50%'],
         data: mapPieData(data)
           .sort((a, b) =>
@@ -54,7 +58,7 @@ export const createStarsByRepChart = (data) => {
               : b.value - a.value
           )
           .slice(0, 10),
-        roseType: 'radius',
+        roseType: checkIfMobile() ? null : 'area',
         emphasis: {
           itemStyle: {
             shadowBlur: 10,

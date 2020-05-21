@@ -20,7 +20,7 @@ const icons = [
 const links = icons.map(
   ({ icon, link, preFix }) => html`<div class="two columns center">
     <a href="${link}" target="_blank" class="hvr-bounce-out">
-      <i class="${preFix ? preFix : 'fab'} fa-${icon} fa-10x"></i>
+      <i class="${preFix ? preFix : 'fab'} fa-${icon} fa-7x"></i>
     </a>
   </div>`
 );
