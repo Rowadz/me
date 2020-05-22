@@ -12,9 +12,8 @@ export class Particle {
     );
     this.vel = this.p5.createVector(0, 0);
     this.acc = this.p5.createVector(0, 0);
-    this.maxspeed = 2;
+    this.maxspeed = 1;
     this.h = 157;
-    this.g = 26;
     this.prevPos = this.pos.copy();
   }
   update() {
@@ -35,14 +34,10 @@ export class Particle {
   }
   show() {
     // this.p5.stroke(this.h, 2, 2, 255);
-    this.p5.stroke(26, 147, this.h, 255);
+    this.p5.stroke(26, 147, 200, 255);
     this.h++;
     if (this.h > 255) {
       this.h = 157;
-    }
-    this.g++;
-    if (this.g > 255) {
-      this.g = 26;
     }
     this.p5.strokeWeight(1);
     this.p5.line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);

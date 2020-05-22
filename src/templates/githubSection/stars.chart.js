@@ -1,6 +1,6 @@
 import * as echarts from 'echarts';
 import 'echarts-wordcloud';
-// dark-fresh-cut
+// dark-fresh-cut, dark-mushroom jazz
 import 'echarts/theme/dark-mushroom';
 import { sexyMainColor } from '../colorsHelper/colors.helper';
 const mapPieData = (data = []) =>
@@ -18,6 +18,7 @@ export const createStarsByRepChart = (data) => {
   const chart = echarts.init(
     document.getElementById('stars-by-repos'),
     'dark-mushroom',
+    null,
     {
       renderer: 'svg',
     }
@@ -26,12 +27,15 @@ export const createStarsByRepChart = (data) => {
     color: [
       sexyMainColor,
       '#00d4ff',
-      '#00aea0',
       '#1daabd',
       '#1daebd',
       '#205155',
-      '#358d81',
       '#1ca6b4',
+      '#6CC6E5',
+      '#00BFDB',
+      '#3C6E7F',
+      '#78DCFF',
+      '#00D5F5',
     ],
     // background-image: linear-gradient(to right top, #1a939d, #00aea0, #00c78b, #52dc62, #a8eb12);
     backgroundColor: 'transparent',
@@ -51,13 +55,24 @@ export const createStarsByRepChart = (data) => {
       right: checkIfMobile() ? null : 10,
       top: checkIfMobile() ? null : 20,
       bottom: 20,
+      textStyle: {
+        color: '#fff',
+      },
       data: data.legendData,
       selected: data.selected,
     },
+    textStyle: {
+      color: '#fff',
+    },
     series: [
       {
+        title: {
+          color: '#fff',
+        },
+        isBiggerOrEqual: true,
         name: 'Stars:',
         type: 'pie',
+        smooth: true,
         label: {
           show: !checkIfMobile(),
         },
@@ -70,7 +85,7 @@ export const createStarsByRepChart = (data) => {
               : b.value - a.value
           )
           .slice(0, 10),
-        roseType: checkIfMobile() ? null : 'area',
+        roseType: 'area',
         emphasis: {
           itemStyle: {
             shadowBlur: 10,
