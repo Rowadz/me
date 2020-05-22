@@ -2,6 +2,7 @@ import * as echarts from 'echarts';
 import 'echarts-wordcloud';
 // dark-fresh-cut
 import 'echarts/theme/dark-mushroom';
+import { sexyMainColor } from '../colorsHelper/colors.helper';
 const mapPieData = (data = []) =>
   data
     .map(({ name, stargazers_count, created_at }) => ({
@@ -16,12 +17,23 @@ const checkIfMobile = () =>
 export const createStarsByRepChart = (data) => {
   const chart = echarts.init(
     document.getElementById('stars-by-repos'),
-    'dark-mushroom'
-    // {
-    //   renderer: 'svg',
-    // }
+    'dark-mushroom',
+    {
+      renderer: 'svg',
+    }
   );
   chart.setOption({
+    color: [
+      sexyMainColor,
+      '#00d4ff',
+      '#00aea0',
+      '#1daabd',
+      '#1daebd',
+      '#205155',
+      '#358d81',
+      '#1ca6b4',
+    ],
+    // background-image: linear-gradient(to right top, #1a939d, #00aea0, #00c78b, #52dc62, #a8eb12);
     backgroundColor: 'transparent',
     title: {
       text: 'Stars By Repository',

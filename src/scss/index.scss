@@ -7,10 +7,10 @@ html {
   overflow-x: hidden !important;
   padding: 0;
   margin: 0;
-  font-family: 'Flavors', cursive !important;
+  font-family: sans-serif !important;
   ::selection {
     color: $main-bg;
-    background-color: $sexy-red;
+    background-color: $sexy-blue;
   }
   a {
     text-decoration: none;
@@ -33,7 +33,7 @@ html {
 #skills {
   background-color: $main-bg;
   a {
-    color: $sexy-red;
+    color: $sexy-blue;
     &:hover {
       color: $main-color;
     }
