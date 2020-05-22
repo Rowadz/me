@@ -10,16 +10,16 @@ html {
   font-family: sans-serif !important;
   ::selection {
     color: $main-bg;
-    background-color: $sexy-blue;
+    background-color: $sexy-red;
   }
   a {
     text-decoration: none;
   }
 }
 
-.icon-header {
-  color: $main-color;
-}
+// .icon-header {
+//   color: $main-color;
+// }
 
 #main {
   min-height: 100vh;
@@ -33,9 +33,9 @@ html {
 #skills {
   background-color: $main-bg;
   a {
-    color: $sexy-blue;
+    color: $sexy-red !important;
     &:hover {
-      color: $main-color;
+      color: $main-color !important;
     }
   }
 }
