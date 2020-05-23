@@ -51,7 +51,7 @@ const disaplySelectedProjects = () => html`
   <div class="row">
     <h1 class="center">
       <i class="far fa-sun icon-header"></i>
-      Some Personal Selected Projects
+      <span class="shadow">Some Personal Selected Projects</span>
       <i class="far fa-sun icon-header"></i>
     </h1>
     ${infoHTML}

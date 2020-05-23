@@ -29,7 +29,7 @@ const disaplyLinks = () => html`
   <div class="row p">
     <h1 class="center">
       <i class="fas fa-link icon-header"></i>
-      Links
+      <span class="shadow">Links</span>
       <i class="fas fa-link icon-header"></i>
     </h1>
     ${links}

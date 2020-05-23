@@ -52,7 +52,8 @@ export const createStarsByRepChart = (data) => {
     },
     tooltip: {
       trigger: 'item',
-      formatter: '{a} <br/>{b} : <b>{c}</b> stars ({d}%)',
+      formatter: '{b}<br/> <b>☆{c}☆</b>',
+      // formatter: '{b}<br/> <b>{c}🌟</b> ({d}%)',
     },
     legend: {
       type: 'scroll',
@@ -76,7 +77,7 @@ export const createStarsByRepChart = (data) => {
           color: '#fff',
         },
         isBiggerOrEqual: true,
-        name: 'Stars:',
+        // name: 'Stars:',
         type: 'pie',
         smooth: true,
         label: {

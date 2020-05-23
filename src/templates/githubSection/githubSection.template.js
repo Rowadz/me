@@ -8,7 +8,7 @@ const displayGitHubSection = () => html`
   <div class="row p">
     <h1 class="center">
       <i class="fab fa-github-alt icon-header"></i>
-      GitHub Summary Data
+      <span class="shadow">GitHub Summary Data</span>
       <i class="fab fa-github-alt icon-header"></i>
     </h1>
     <!--<div class="twelve columns center">

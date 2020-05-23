@@ -19,7 +19,8 @@ const icons = [
   { icon: 'git-alt', link: 'https://git-scm.com/' },
   { icon: 'gitkraken', link: 'https://www.gitkraken.com/' },
   { icon: 'bitbucket', link: 'https://bitbucket.org/product' },
-  // {icon: 'ember', link: ''},
+  { icon: 'figma', link: 'https://www.figma.com/' },
+  // { icon: 'ember', link: 'https://emberjs.com/' },
   { icon: 'github-alt', link: 'http://github.com/' },
   // { 'gulp', link: ''},
   //{ 'grunt', link: ''},
@@ -27,6 +28,9 @@ const icons = [
     icon: 'html5',
     link: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
   },
+  { icon: 'firefox', link: 'https://www.mozilla.org/en-US/exp/firefox/new/' },
+  { icon: 'chrome', link: 'https://www.google.com/chrome/' },
+  { icon: 'trello', link: 'https://trello.com/' },
   { icon: 'css3', link: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
   { icon: 'jenkins', link: 'https://www.jenkins.io/' },
   { icon: 'jira', link: 'https://www.atlassian.com/software/jira' },
@@ -52,7 +56,9 @@ const disaplySkills = () => html`
   <div class="row p">
     <h1 class="center">
       <i class="fas fa-hands icon-header"></i>
-      Icons for some of the things that I worked with
+      <span class="shadow"
+        >Icons for some of the things that I worked with</span
+      >
       <i class="fas fa-hands icon-header"></i>
     </h1>
     ${skills}

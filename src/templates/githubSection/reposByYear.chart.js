@@ -37,7 +37,7 @@ export const createReposByYears = (data) => {
       },
       formatter: ([{ value, name }]) => {
         const colorSpan = `<span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:${sexyMainColor}"></span>`;
-        return `${colorSpan} created <b>${value}</b> repos in ${name}`;
+        return `${colorSpan} Created <b>${value}</b> repos in ${name}`;
       },
     },
     animation: false,
