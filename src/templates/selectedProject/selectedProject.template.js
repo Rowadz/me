@@ -15,16 +15,16 @@ const info = [
   },
   {
     name: 'Vexpest',
-    link: 'https://mohammedal-rowad.github.io/vexpest/',
+    link: 'https://mohammedal-rowad.github.io/vexpest_V2/',
     about:
       'React app that creates a dashboard based on your GitHub public data',
     ul: [
       { name: 'React', link: 'https://reactjs.org/' },
-      { name: 'Highcharts', link: 'https://www.highcharts.com/' },
+      { name: 'Echarts', link: 'https://echarts.apache.org/' },
       { name: 'Wired Elements', link: 'https://wiredjs.com/' },
       {
         name: 'Video',
-        link: 'https://www.youtube.com/watch?v=ouSJj9peV8c&t=6s',
+        link: '#',
       },
     ],
   },
