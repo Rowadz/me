@@ -1,5 +1,6 @@
 import { html, render } from 'lit-html'
 import '@fortawesome/fontawesome-free/js/all'
+import { checkIfMobile } from '../../helpers/helper'
 const linksSection = document.getElementById('links')
 const icons = [
   { icon: 'linkedin', link: 'https://www.linkedin.com/in/mohammed-al-rowad/' },
@@ -17,15 +18,42 @@ const icons = [
   { icon: 'lemon', link: 'https://leetcode.com/rowadwo/', preFix: 'fas' },
   { icon: 'hackerrank', link: 'https://www.hackerrank.com/rowad' },
 ]
-const links = icons.map(
-  ({ icon, link, preFix }) => html`<div
-    class="two columns rm-margin-left center"
-  >
-    <a href="${link}" target="_blank" class="hvr-bounce-out">
-      <i class="${preFix ? preFix : 'fab'} fa-${icon} fa-7x"></i>
-    </a>
-  </div>`
-)
+let links = []
+if (checkIfMobile()) {
+  for (let i = 0; i < icons.length; i += 2) {
+    const { icon, link, preFix } = icons[i]
+
+    const linkToDisplay = html`<div class="two columns rm-margin-left center">
+      <a href="${link}" target="_blank" class="hvr-bounce-out">
+        <i class="${preFix ? preFix : 'fab'} fa-${icon} custom-icon-size-2"></i>
+      </a>
+      ${icons[i + 1]
+        ? html`<a
+            href="${icons[i + 1].link}"
+            target="_blank"
+            class="hvr-bounce-out"
+          >
+            <i
+              class="${icons[i + 1].preFix
+                ? icons[i + 1].preFix
+                : 'fab'} fa-${icons[i + 1].icon} custom-icon-size-2"
+            ></i>
+          </a>`
+        : ''}
+    </div>`
+    links.push(linkToDisplay)
+  }
+} else {
+  links = icons.map(
+    ({ icon, link, preFix }) => html`<div
+      class="two columns rm-margin-left center"
+    >
+      <a href="${link}" target="_blank" class="hvr-bounce-out">
+        <i class="${preFix ? preFix : 'fab'} fa-${icon} fa-7x"></i>
+      </a>
+    </div>`
+  )
+}
 
 const disaplyLinks = () => html`
   <div class="row p">
