@@ -21,6 +21,9 @@ html {
   .m-b-40px {
     margin-bottom: 40px;
   }
+  .hide-m-b-40px {
+    margin-bottom: auto !important;
+  }
 }
 .custom-icon-size {
   font-size: 50px;
