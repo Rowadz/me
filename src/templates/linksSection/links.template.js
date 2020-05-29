@@ -1,6 +1,6 @@
-import { html, render } from 'lit-html';
-import '@fortawesome/fontawesome-free/js/all';
-const linksSection = document.getElementById('links');
+import { html, render } from 'lit-html'
+import '@fortawesome/fontawesome-free/js/all'
+const linksSection = document.getElementById('links')
 const icons = [
   { icon: 'linkedin', link: 'https://www.linkedin.com/in/mohammed-al-rowad/' },
   { icon: 'github', link: 'https://github.com/MohammedAl-Rowad' },
@@ -16,14 +16,16 @@ const icons = [
   { icon: 'medium', link: 'https://medium.com/@mohammedalrowad' },
   { icon: 'lemon', link: 'https://leetcode.com/rowadwo/', preFix: 'fas' },
   { icon: 'hackerrank', link: 'https://www.hackerrank.com/rowad' },
-];
+]
 const links = icons.map(
-  ({ icon, link, preFix }) => html`<div class="two columns center">
+  ({ icon, link, preFix }) => html`<div
+    class="two columns rm-margin-left center"
+  >
     <a href="${link}" target="_blank" class="hvr-bounce-out">
       <i class="${preFix ? preFix : 'fab'} fa-${icon} fa-7x"></i>
     </a>
   </div>`
-);
+)
 
 const disaplyLinks = () => html`
   <div class="row p">
@@ -32,9 +34,11 @@ const disaplyLinks = () => html`
       <span class="shadow">Links</span>
       <i class="fas fa-link icon-header"></i>
     </h1>
-    ${links}
+    <div class="flex-container p">
+      ${links}
+    </div>
   </div>
-`;
-render(disaplyLinks(), linksSection);
+`
+render(disaplyLinks(), linksSection)
 
-export default disaplyLinks;
+export default disaplyLinks
