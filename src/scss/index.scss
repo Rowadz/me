@@ -18,16 +18,18 @@ html {
   a {
     text-decoration: none;
   }
-  .m-b-40px{
+  .m-b-40px {
     margin-bottom: 40px;
   }
+}
+.custom-icon-size {
+  font-size: 50px;
+  padding: 20px;
 }
 
 // .icon-header {
 //   color: $main-color;
 // }
-
-
 
 #main {
   min-height: 100vh;

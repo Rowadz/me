@@ -1,8 +1,9 @@
-import * as echarts from 'echarts';
-import 'echarts-wordcloud';
+import * as echarts from 'echarts'
+import 'echarts-wordcloud'
+import { checkIfMobile } from '../../helpers/helper'
 // dark-fresh-cut, dark-mushroom jazz
-import 'echarts/theme/dark-mushroom';
-import { sexyMainColor } from '../colorsHelper/colors.helper';
+import 'echarts/theme/dark-mushroom'
+import { sexyMainColor } from '../colorsHelper/colors.helper'
 const mapPieData = (data = []) =>
   data
     .map(({ name, stargazers_count, created_at }) => ({
@@ -10,9 +11,7 @@ const mapPieData = (data = []) =>
       value: stargazers_count,
       created_at,
     }))
-    .filter(({ value }) => value > 0);
-const checkIfMobile = () =>
-  /Mobi/.test(navigator.userAgent) || /Mobi|Android/i.test(navigator.userAgent);
+    .filter(({ value }) => value > 0)
 
 export const createStarsByRepChart = (data) => {
   const chart = echarts.init(
@@ -22,7 +21,7 @@ export const createStarsByRepChart = (data) => {
     {
       renderer: 'svg',
     }
-  );
+  )
   chart.setOption({
     color: [
       sexyMainColor,
@@ -105,5 +104,5 @@ export const createStarsByRepChart = (data) => {
         animationDelay: (idx) => Math.random() * 200,
       },
     ],
-  });
-};
+  })
+}

@@ -1,6 +1,7 @@
-import { html, render } from 'lit-html';
-import '@fortawesome/fontawesome-free/js/all';
-const linksSection = document.getElementById('skills');
+import { html, render } from 'lit-html'
+import '@fortawesome/fontawesome-free/js/all'
+import { checkIfMobile } from '../../helpers/helper'
+const linksSection = document.getElementById('skills')
 const icons = [
   {
     icon: 'js',
@@ -43,16 +44,37 @@ const icons = [
   // { icon: 'skype', link: 'https://www.skype.com/en/' },
   { icon: 'facebook-square', link: 'https://developers.facebook.com/' },
   { icon: 'google-plus-g', link: 'https://developers.google.com/' },
-];
-const skills = icons.map(
-  ({ icon, link }) => html`<div class="one columns center">
-    <a href="${link}" target="_blank" class="hvr-bounce-out"
-      ><i class="fab fa-${icon} fa-5x"></i
-    ></a>
-  </div>`
-);
+]
 
-const disaplySkills = () => html`
+let skills = []
+
+if (checkIfMobile()) {
+  for (let i = 0; i < icons.length; i += 3) {
+    const { icon, link } = icons[i]
+    const skill = html`<div class="twelve columns center">
+      <a href="${link}" target="_blank" class="hvr-bounce-out"
+        ><i class="fab fa-${icon} custom-icon-size"></i
+      ></a>
+      <a href="${icons[i + 1].link}" target="_blank" class="hvr-bounce-out"
+        ><i class="fab fa-${icons[i + 1].icon} custom-icon-size"></i
+      ></a>
+      <a href="${icons[i + 2].link}" target="_blank" class="hvr-bounce-out"
+        ><i class="fab fa-${icons[i + 2].icon} custom-icon-size"></i
+      ></a>
+    </div>`
+    skills.push(skill)
+  }
+} else {
+  skills = icons.map(
+    ({ icon, link }) => html`<div class="one columns center">
+      <a href="${link}" target="_blank" class="hvr-bounce-out"
+        ><i class="fab fa-${icon} fa-5x"></i
+      ></a>
+    </div>`
+  )
+}
+
+const displaySkills = () => html`
   <div class="row p">
     <h1 class="center">
       <i class="fas fa-hands icon-header"></i>
@@ -63,7 +85,7 @@ const disaplySkills = () => html`
     </h1>
     ${skills}
   </div>
-`;
-render(disaplySkills(), linksSection);
+`
+render(displaySkills(), linksSection)
 
-export default disaplySkills;
+export default displaySkills
