@@ -13,7 +13,7 @@ html {
   font-family: sans-serif !important;
   ::selection {
     color: $main-bg;
-    background-color: $sexy-red;
+    background-color: $sexy-blue;
   }
   a {
     text-decoration: none;
@@ -46,7 +46,7 @@ html {
 #skills {
   background-color: $main-bg;
   a {
-    color: $sexy-red !important;
+    color: $sexy-blue !important;
     &:hover {
       color: $main-color !important;
     }
@@ -103,7 +103,7 @@ html {
 
 html {
   --scrollbarBG: #0e0e0e;
-  --thumbBG: #a41304;
+  --thumbBG: #775d9e;
 }
 body::-webkit-scrollbar {
   width: 11px;

@@ -25,22 +25,29 @@ export const createStarsByRepChart = (data) => {
   chart.setOption({
     color: [
       sexyMainColor,
-      '#c62828',
-      '#ff8a80',
-      '#ef5350',
-      '#e57373',
-      '#ef9a9a',
-      '#ff1744',
-      // '#00d4ff',
-      // '#1daabd',
-      // '#1daebd',
-      // '#205155',
-      // '#1ca6b4',
-      // '#6CC6E5',
-      // '#00BFDB',
-      // '#3C6E7F',
-      // '#78DCFF',
-      // '#00D5F5',
+      '#241c30',
+      '#3c2f50',
+      '#554270',
+      '#6d5590',
+      '#866faa',
+      '#a18fbd',
+      '#bcafd0',
+      // '#c62828', red
+      // '#ff8a80', red
+      // '#ef5350', red
+      // '#e57373', red
+      // '#ef9a9a', red
+      // '#ff1744', red
+      // '#00d4ff', // cyan
+      // '#1daabd', // cyan
+      // '#1daebd', // cyan
+      // '#205155', // cyan
+      // '#1ca6b4', // cyan
+      // '#6CC6E5', // cyan
+      // '#00BFDB', // cyan
+      // '#3C6E7F', // cyan
+      // '#78DCFF', // cyan
+      // '#00D5F5', // cyan
     ],
     // background-image: linear-gradient(to right top, #1a939d, #00aea0, #00c78b, #52dc62, #a8eb12);
     backgroundColor: 'transparent',
