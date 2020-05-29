@@ -31,7 +31,7 @@ export const createStarsByRepChart = (data) => {
       '#6d5590',
       '#866faa',
       '#a18fbd',
-      '#bcafd0',
+      '#6d5590',
       // '#c62828', red
       // '#ff8a80', red
       // '#ef5350', red

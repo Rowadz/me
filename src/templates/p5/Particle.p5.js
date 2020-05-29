@@ -33,7 +33,8 @@ export class Particle {
     this.acc.add(force)
   }
   show() {
-    this.p5.stroke(this.h / 2, this.h / 2, this.h, 255)
+    this.p5.stroke(this.h / 1.5, this.h / 3, this.h, 255)
+    // rgb(109, 85, 144)
     // this.p5.stroke(26, 147, 200, 255);
     this.h++
     if (this.h > 255) {
