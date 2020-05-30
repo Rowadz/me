@@ -1,6 +1,6 @@
-import { html, render } from 'lit-html';
-import '@fortawesome/fontawesome-free/js/all';
-const selectedProjectsSection = document.getElementById('selected-projects');
+import { html, render } from 'lit-html'
+import '@fortawesome/fontawesome-free/js/all'
+const selectedProjectsSection = document.getElementById('selected-projects')
 const info = [
   {
     name: 'Yedua',
@@ -24,15 +24,44 @@ const info = [
       { name: 'Wired Elements', link: 'https://wiredjs.com/' },
       {
         name: 'Video',
+        link: 'https://youtu.be/NwS7zRBCdnA',
+      },
+    ],
+  },
+  {
+    name: 'AReS',
+    link: 'https://github.com/MohammedAl-Rowad/AReS',
+    about: 'explorer tool utilizing Dublin Core and CG Core metadata schemas',
+    ul: [
+      { name: 'Angular', link: 'https://angular.io/' },
+      { name: 'Highcharts', link: 'https://www.highcharts.com/' },
+      { name: 'NGRX', link: 'https://ngrx.io/' },
+      {
+        name: 'Video',
         link: '#',
       },
     ],
   },
-];
+  {
+    name: 'NestJs',
+    link: 'https://github.com/MohammedAl-Rowad/NestJs-youtube',
+    about: 'I created a videos (+7 hours) about Nestjs to teach people',
+    ul: [
+      { name: 'NestJs', link: 'https://nestjs.com/' },
+      { name: 'postgresql', link: 'https://www.postgresql.org/' },
+      { name: 'jwt', link: 'http://jwt.io/' },
+      {
+        name: 'Videos',
+        link:
+          'https://www.youtube.com/playlist?list=PLM0LBHjz37LVfT_McvhvKtRoVBk6riWEj',
+      },
+    ],
+  },
+]
 
 const infoHTML = info.map(
   ({ name, link, about, ul }) => html`<div
-    class="five columns center selected-projects"
+    class="center selected-projects three columns"
   >
     <h3>
       <a href="${link}" target="_blank">${name}</a>
@@ -45,19 +74,21 @@ const infoHTML = info.map(
       )}
     </ul>
   </div>`
-);
+)
 
 const disaplySelectedProjects = () => html`
   <div class="row">
     <h1 class="center">
       <i class="far fa-sun icon-header"></i>
-      <span class="shadow">Some Personal Selected Projects</span>
+      <span class="shadow">Some Selected Projects</span>
       <i class="far fa-sun icon-header"></i>
     </h1>
-    ${infoHTML}
+    <div class="flex-container p">
+      ${infoHTML}
+    </div>
   </div>
-`;
+`
 
-render(disaplySelectedProjects(), selectedProjectsSection);
+render(disaplySelectedProjects(), selectedProjectsSection)
 
-export default disaplySelectedProjects;
+export default disaplySelectedProjects

@@ -12,7 +12,7 @@ html {
   margin: 0;
   font-family: sans-serif !important;
   ::selection {
-    color: $main-bg;
+    color: $main-color;
     background-color: $sexy-blue;
   }
   a {
@@ -32,6 +32,9 @@ html {
 .custom-icon-size-2 {
   font-size: 90px;
   padding: 20px;
+}
+.m-l-10px {
+  margin-left: 10px !important;
 }
 
 // .icon-header {
