@@ -1,0 +1,25 @@
+import { html, render } from 'lit-html'
+import '@fortawesome/fontawesome-free/js/all'
+const aboutSection = document.getElementById('about')
+
+const disaplyAbout = () => html`
+  <div class="row p">
+    <h1 class="center">
+      <i class="fas fa-address-card icon-header"></i>
+      <span class="shadow">About</span>
+      <i class="fas fa-address-card icon-header"></i>
+    </h1>
+    <div class="flex-container p">
+      <h5>
+        A full-stack software engineer who is located in Jordan and I'm very
+        interested in open source code & new technologies.
+        <br />
+        This page is my personal website where you can find links about me &
+        projects my projects.
+      </h5>
+    </div>
+  </div>
+`
+render(disaplyAbout(), aboutSection)
+
+export default disaplyAbout
