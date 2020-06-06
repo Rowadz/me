@@ -242,7 +242,7 @@ const x=e=>null===e||!("object"==typeof e||"function"==typeof e),w=e=>Array.isAr
         interested in open source code & new technologies.
         <br />
         This page is my personal website where you can find links about me &
-        projects my projects.
+        some of my projects.
       </h5>
     </div>
   </div>
