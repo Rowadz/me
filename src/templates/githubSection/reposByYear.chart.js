@@ -29,9 +29,15 @@ export const createReposByYears = (data) => {
     title: {
       text: 'Repositories creation rate by years',
       left: 'center',
+      textStyle: {
+        fontFamily: 'Roboto Slab, serif',
+      },
     },
     tooltip: {
       trigger: 'axis',
+      textStyle: {
+        fontFamily: 'Roboto Slab, serif',
+      },
       axisPointer: {
         animation: true,
       },
@@ -48,12 +54,18 @@ export const createReposByYears = (data) => {
       splitLine: {
         show: false,
       },
+      nameTextStyle: {
+        fontFamily: 'Roboto Slab, serif',
+      },
     },
     yAxis: {
       type: 'value',
       boundaryGap: false,
       splitLine: {
         show: false,
+      },
+      nameTextStyle: {
+        fontFamily: 'Roboto Slab, serif',
       },
     },
     series: [

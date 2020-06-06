@@ -31,7 +31,7 @@ const info = [
   {
     name: 'AReS',
     link: 'https://github.com/MohammedAl-Rowad/AReS',
-    about: 'explorer tool utilizing Dublin Core and CG Core metadata schemas',
+    about: 'Explorer tool utilizing Dublin Core and CG Core metadata schemas',
     ul: [
       { name: 'Angular', link: 'https://angular.io/' },
       { name: 'Highcharts', link: 'https://www.highcharts.com/' },
@@ -66,7 +66,7 @@ const infoHTML = info.map(
     <h3>
       <a href="${link}" target="_blank">${name}</a>
     </h3>
-    <p>${about}</p>
+    <p><b>${about}</b></p>
     <ul>
       ${ul.map(
         ({ link, name }) =>

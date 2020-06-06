@@ -55,6 +55,9 @@ export const createStarsByRepChart = (data) => {
       text: 'Stars By Repository',
       subtext: '"small partition"',
       left: 'center',
+      textStyle: {
+        fontFamily: 'Roboto Slab, serif',
+      },
     },
     tooltip: {
       trigger: 'item',
@@ -73,9 +76,13 @@ export const createStarsByRepChart = (data) => {
       },
       data: data.legendData,
       selected: data.selected,
+      pageTextStyle: {
+        fontFamily: 'Roboto Slab, serif',
+      },
     },
     textStyle: {
       color: '#fff',
+      fontFamily: 'Roboto Slab, serif',
     },
     series: [
       {
