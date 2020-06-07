@@ -243,6 +243,8 @@ const x=e=>null===e||!("object"==typeof e||"function"==typeof e),w=e=>Array.isAr
         <br />
         This page is my personal website where you can find links about me &
         some of my projects.
+        <br />
+        Contact me here -> <b>rowadwo@gmail.com</b>
       </h5>
     </div>
   </div>
