@@ -15,7 +15,9 @@ const disaplyAbout = () => html`
         interested in open source code & new technologies.
         <br />
         This page is my personal website where you can find links about me &
-        projects my projects.
+        some of my projects.
+        <br />
+        Contact me here -> <b>rowadwo@gmail.com</b>
       </h5>
     </div>
   </div>
