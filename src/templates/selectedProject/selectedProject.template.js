@@ -43,17 +43,17 @@ const info = [
     ],
   },
   {
-    name: 'NestJs',
-    link: 'https://github.com/MohammedAl-Rowad/NestJs-youtube',
-    about: 'I created a videos (+7 hours) about Nestjs to teach people',
+    name: 'Pollux',
+    link: 'https://mohammedal-rowad.github.io/pollux',
+    about:
+      'React/Redux app that generates fake data based on prototypes you define',
     ul: [
-      { name: 'NestJs', link: 'https://nestjs.com/' },
-      { name: 'postgresql', link: 'https://www.postgresql.org/' },
-      { name: 'jwt', link: 'http://jwt.io/' },
+      { name: 'React', link: 'https://reactjs.org/' },
+      { name: 'Redux', link: 'https://redux.js.org/' },
+      { name: 'suitejs', link: 'https://rsuitejs.com/en/' },
       {
-        name: 'Videos',
-        link:
-          'https://www.youtube.com/playlist?list=PLM0LBHjz37LVfT_McvhvKtRoVBk6riWEj',
+        name: 'Video',
+        link: 'https://www.youtube.com/watch?v=Vh0M0oNo7Gc',
       },
     ],
   },
