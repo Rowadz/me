@@ -34,7 +34,7 @@ const info = [
     about: 'Explorer tool utilizing Dublin Core and CG Core metadata schemas',
     ul: [
       { name: 'Angular', link: 'https://angular.io/' },
-      { name: 'Highcharts', link: 'https://www.highcharts.com/' },
+      { name: 'Elasticsearch', link: 'https://www.elastic.co/' },
       { name: 'NGRX', link: 'https://ngrx.io/' },
       {
         name: 'Video',
@@ -50,7 +50,7 @@ const info = [
     ul: [
       { name: 'React', link: 'https://reactjs.org/' },
       { name: 'Redux', link: 'https://redux.js.org/' },
-      { name: 'suitejs', link: 'https://rsuitejs.com/en/' },
+      { name: 'Rsuitejs', link: 'https://rsuitejs.com/en/' },
       {
         name: 'Video',
         link: 'https://www.youtube.com/watch?v=Vh0M0oNo7Gc',
