@@ -2,7 +2,7 @@ import * as p5 from 'p5';
 import { Vector } from 'p5';
 import { Particle } from './Particle.p5';
 import { sexyBlack } from '../colorsHelper/colors.helper';
-
+window.p5 = p5;
 let s = (sk) => {
   const scl = 10;
   let cols,
@@ -55,6 +55,10 @@ let s = (sk) => {
       particles[i].edges();
       particles[i].show();
     }
+  };
+  sk.windowResized = () => {
+    const { windowHeight, windowWidth } = sk;
+    sk.resizeCanvas(windowWidth, windowHeight, false);
   };
 };
 
