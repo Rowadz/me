@@ -23,12 +23,8 @@ const icons = [
   { icon: 'figma', link: 'https://www.figma.com/' },
   // { icon: 'ember', link: 'https://emberjs.com/' },
   { icon: 'github-alt', link: 'http://github.com/' },
-  // { 'gulp', link: ''},
+  { icon: 'gulp', link: 'https://gulpjs.com/' },
   //{ 'grunt', link: ''},
-  {
-    icon: 'html5',
-    link: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
-  },
   { icon: 'firefox', link: 'https://www.mozilla.org/en-US/exp/firefox/new/' },
   { icon: 'chrome', link: 'https://www.google.com/chrome/' },
   { icon: 'trello', link: 'https://trello.com/' },

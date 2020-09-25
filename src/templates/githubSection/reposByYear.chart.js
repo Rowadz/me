@@ -25,6 +25,7 @@ export const createReposByYears = (data) => {
       renderer: 'svg',
     }
   )
+  window.chartsz.push(chart)
   chart.setOption({
     title: {
       text: 'Repositories creation rate by years',

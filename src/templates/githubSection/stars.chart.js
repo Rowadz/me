@@ -22,6 +22,8 @@ export const createStarsByRepChart = (data) => {
       renderer: 'svg',
     }
   )
+  const { chartsz } = window
+  window.chartsz.push(chart)
   chart.setOption({
     color: [
       sexyMainColor,
