@@ -1,5 +1,6 @@
 import { html, render } from 'lit-html'
 import '@fortawesome/fontawesome-free/js/all'
+import * as lazyload from 'lazyload'
 const videosSection = document.getElementById('videos')
 const info = [
   {
@@ -88,7 +89,7 @@ const mapper = (data) =>
     >
       <h3>${name}</h3>
       <a href="${link}" target="_blank" rel="noopener noreferrer">
-        <img src="${img}" width="300" class="${animation}" />
+        <img width="300" class="lazyload ${animation}" data-src="${img}" />
       </a>
     </div>`
   )
@@ -111,5 +112,5 @@ const displayCideosSection = () => html`
 `
 
 render(displayCideosSection(), videosSection)
-
+new lazyload(document.querySelectorAll('.lazyload'))
 export default displayCideosSection
