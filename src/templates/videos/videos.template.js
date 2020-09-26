@@ -4,68 +4,92 @@ const videosSection = document.getElementById('videos')
 const info = [
   {
     name: 'Gulp 4',
+    animation: 'hvr-rotate',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/gulp-4-yt/master/thumb.png',
     link:
-      'https://www.youtube.com/embed/videoseries?list=PLM0LBHjz37LVNapdMeupY-SevP4TrgVxZ',
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LVNapdMeupY-SevP4TrgVxZ',
   },
   {
-    name: 'RxBD',
+    name: 'RxDB',
+    animation: 'hvr-grow-rotate',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/RxDB-real-time-node-yt/master/thumb.png',
     link:
-      'https://www.youtube.com/embed/videoseries?list=PLM0LBHjz37LUrdnzOyJLci-ojYAGYvQdh',
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LUrdnzOyJLci-ojYAGYvQdh',
   },
   {
     name: 'Nestjs',
+    animation: 'hvr-wobble-top',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/NestJs-youtube/master/Nest_js.png',
     link:
-      'https://www.youtube.com/embed/videoseries?list=PLM0LBHjz37LVfT_McvhvKtRoVBk6riWEj',
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LVfT_McvhvKtRoVBk6riWEj',
   },
 ]
 const info2 = [
   {
     name: 'TypeORM',
+    animation: 'hvr-wobble-top',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/typeorm_yt/master/typeorm.png',
     link:
-      'https://www.youtube.com/embed/videoseries?list=PLM0LBHjz37LVtZY-DG0OrZzZkkRtWGR6B',
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LVtZY-DG0OrZzZkkRtWGR6B',
   },
   {
     name: 'Koa',
+    animation: 'hvr-rotate',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/koa-ts-yt/master/koa.png',
     link:
-      'https://www.youtube.com/embed/videoseries?list=PLM0LBHjz37LV8imdUyP2uo-Ep54uIt-V0',
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LV8imdUyP2uo-Ep54uIt-V0',
   },
   {
     name: 'Sequelize',
+    animation: 'hvr-grow-rotate',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/sequelize-youtube/master/sequelize.png',
     link:
-      'https://www.youtube.com/embed/videoseries?list=PLM0LBHjz37LWu38VSaB2Ubz8AHfo8q6uM',
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LWu38VSaB2Ubz8AHfo8q6uM',
   },
 ]
 
 const info3 = [
-    {
-      name: 'Hapi',
-      link:
-        'https://www.youtube.com/embed/videoseries?list=PLM0LBHjz37LVV3AjmeX0oTdKYOcmDTnog',
-    },
-    {
-      name: 'PonyORM',
-      link:
-        'https://www.youtube.com/embed/videoseries?list=PLM0LBHjz37LXPeEjSuumB4g4JFCsTwNgn',
-    },
-    {
-      name: 'JS notes',
-      link:
-        'https://www.youtube.com/embed/videoseries?list=PLM0LBHjz37LWHEM4qbjV9oLM4WDUuqs7r',
-    },
-  ]
+  {
+    name: 'Hapi',
+    animation: 'hvr-wobble-top',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/hapi_yt/master/Hapi.png',
+    link:
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LVV3AjmeX0oTdKYOcmDTnog',
+  },
+  {
+    name: 'PonyORM',
+    animation: 'hvr-grow-rotate',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/PonyORM_yt/master/PonyORM.png',
+    link:
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LXPeEjSuumB4g4JFCsTwNgn',
+  },
+  {
+    name: 'Underscore',
+    animation: 'hvr-rotate',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/underscore_simple_copy_yt/master/underscore.png',
+    link:
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LUcrtIbit0rBETRWHNvE7Nf',
+  },
+]
 
 const mapper = (data) =>
   data.map(
-    ({ link, name }) => html`<div
+    ({ link, name, img, animation }) => html`<div
       class="center selected-projects three columns"
     >
       <h3>${name}</h3>
-      <iframe
-        src="${link}"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <a href="${link}" target="_blank" rel="noopener noreferrer">
+        <img src="${img}" width="300" class="${animation}" />
+      </a>
     </div>`
   )
 
