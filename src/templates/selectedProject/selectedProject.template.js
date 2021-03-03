@@ -3,13 +3,13 @@ import '@fortawesome/fontawesome-free/js/all'
 const selectedProjectsSection = document.getElementById('selected-projects')
 const info = [
   {
-    name: 'Yedua',
-    link: 'https://mohammedal-rowad.github.io/Yedua/',
-    about: 'A recursive web scraper that visualizes the DOM',
+    name: 'Erela',
+    link: 'https://github.com/MohammedAl-Rowad/Erela',
+    about: 'Nodejs - express - TypeScript framework with simple cli generator',
     ul: [
-      { name: 'Express', link: 'https://expressjs.com/' },
-      { name: 'Cheeriojs', link: 'https://github.com/cheeriojs/cheerio' },
-      { name: 'Angular', link: 'https://angular.io/' },
+      { name: 'TypeORM', link: 'https://typeorm.io/#/' },
+      { name: 'Routing Controllers', link: 'https://github.com/typestack/routing-controllers' },
+      { name: 'Typedi', link: 'https://github.com/typestack/typedi' },
       { name: 'Video', link: 'https://www.youtube.com/watch?v=gd95R18BwJw' },
     ],
   },

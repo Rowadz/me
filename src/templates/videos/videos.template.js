@@ -4,12 +4,20 @@ import * as lazyload from 'lazyload'
 const videosSection = document.getElementById('videos')
 const info = [
   {
-    name: 'Gulp 4',
+    name: 'createAsyncThunk',
     animation: 'hvr-rotate',
     img:
-      'https://raw.githubusercontent.com/MohammedAl-Rowad/gulp-4-yt/master/thumb.png',
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/in-depth-create-async-thunk/main/thumb.png',
     link:
-      'https://www.youtube.com/playlist?list=PLM0LBHjz37LVNapdMeupY-SevP4TrgVxZ',
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LW_Wz3DPoT5-bm1btrBD1bu',
+  },
+  {
+    name: 'redux toolkit',
+    animation: 'hvr-rotate',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/react-redux-toolkit-yt/main/thumb.png',
+    link:
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LXSASzEv81f3tGptAsEGQUM',
   },
   {
     name: 'RxDB',
@@ -18,14 +26,6 @@ const info = [
       'https://raw.githubusercontent.com/MohammedAl-Rowad/RxDB-real-time-node-yt/master/thumb.png',
     link:
       'https://www.youtube.com/playlist?list=PLM0LBHjz37LUrdnzOyJLci-ojYAGYvQdh',
-  },
-  {
-    name: 'Nestjs',
-    animation: 'hvr-wobble-top',
-    img:
-      'https://raw.githubusercontent.com/MohammedAl-Rowad/NestJs-youtube/master/Nest_js.png',
-    link:
-      'https://www.youtube.com/playlist?list=PLM0LBHjz37LVfT_McvhvKtRoVBk6riWEj',
   },
 ]
 const info2 = [
@@ -73,12 +73,38 @@ const info3 = [
       'https://www.youtube.com/playlist?list=PLM0LBHjz37LXPeEjSuumB4g4JFCsTwNgn',
   },
   {
-    name: 'Underscore',
+    name: 'Gulp 4',
     animation: 'hvr-rotate',
     img:
-      'https://raw.githubusercontent.com/MohammedAl-Rowad/underscore_simple_copy_yt/master/underscore.png',
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/gulp-4-yt/master/thumb.png',
     link:
-      'https://www.youtube.com/playlist?list=PLM0LBHjz37LUcrtIbit0rBETRWHNvE7Nf',
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LVNapdMeupY-SevP4TrgVxZ',
+  },
+]
+const info4 = [
+  {
+    name: 'createEntityAdapter',
+    animation: 'hvr-grow-rotate',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/redux-toolkit-adapters-and-thunks/main/thumb.png',
+    link:
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LW0zVaEjpeCmw-WgglfXWnI',
+  },
+  {
+    name: 'Nestjs',
+    animation: 'hvr-wobble-top',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/NestJs-youtube/master/Nest_js.png',
+    link:
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LVfT_McvhvKtRoVBk6riWEj',
+  },
+  {
+    name: 'react & redux',
+    animation: 'hvr-wobble-top',
+    img:
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/react-redux-yt/master/thumb.png',
+    link:
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LU1l5XXp5oxF6khA5kwRHg_',
   },
 ]
 
@@ -97,6 +123,7 @@ const mapper = (data) =>
 const infoHTML = mapper(info)
 const infoHTML2 = mapper(info2)
 const infoHTML3 = mapper(info3)
+const infoHTML4 = mapper(info4)
 
 const displayCideosSection = () => html`
   <div class="row">
@@ -108,6 +135,7 @@ const displayCideosSection = () => html`
     <div class="flex-container p">${infoHTML}</div>
     <div class="flex-container p">${infoHTML2}</div>
     <div class="flex-container p">${infoHTML3}</div>
+    <div class="flex-container p">${infoHTML4}</div>
   </div>
 `
 

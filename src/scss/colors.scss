@@ -3,3 +3,8 @@ $main-color: #f3f2f0;
 $main-2: #737373;
 $sexy-red: #a41304;
 $sexy-blue: #6d5590;
+
+:export {
+    mainBg: $main-bg;
+    mainColor: $main-color;
+}
