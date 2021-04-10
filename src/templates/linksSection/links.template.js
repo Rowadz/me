@@ -15,8 +15,8 @@ const icons = [
     link: 'https://stackoverflow.com/users/10368302/rowad',
   },
   { icon: 'medium', link: 'https://medium.com/@mohammedalrowad' },
-  { icon: 'lemon', link: 'https://leetcode.com/rowadwo/', preFix: 'fas' },
-  { icon: 'hackerrank', link: 'https://www.hackerrank.com/rowad' },
+  { icon: 'code', link: 'https://leetcode.com/rowadz/', preFix: 'fas' },
+  { icon: 'hackerrank', link: 'https://www.hackerrank.com/rowadz' },
 ]
 let links = []
 if (checkIfMobile()) {
