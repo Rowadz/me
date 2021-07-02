@@ -12,16 +12,16 @@ const info = [
       'https://www.youtube.com/playlist?list=PLM0LBHjz37LW_Wz3DPoT5-bm1btrBD1bu',
   },
   {
-    name: 'redux toolkit',
+    name: 'Django',
     animation: 'hvr-rotate',
     img:
-      'https://raw.githubusercontent.com/MohammedAl-Rowad/react-redux-toolkit-yt/main/thumb.png',
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/django-react-yt/main/new-thumb.png',
     link:
-      'https://www.youtube.com/playlist?list=PLM0LBHjz37LXSASzEv81f3tGptAsEGQUM',
+      'https://youtube.com/playlist?list=PLM0LBHjz37LU_XA4TX_H0chJ1OgEOHpJ3',
   },
   {
     name: 'RxDB',
-    animation: 'hvr-grow-rotate',
+    animation: 'hvr-rotate',
     img:
       'https://raw.githubusercontent.com/MohammedAl-Rowad/RxDB-real-time-node-yt/master/thumb.png',
     link:
@@ -31,7 +31,7 @@ const info = [
 const info2 = [
   {
     name: 'TypeORM',
-    animation: 'hvr-wobble-top',
+    animation: 'hvr-rotate',
     img:
       'https://raw.githubusercontent.com/MohammedAl-Rowad/typeorm_yt/master/typeorm.png',
     link:
@@ -47,7 +47,7 @@ const info2 = [
   },
   {
     name: 'Sequelize',
-    animation: 'hvr-grow-rotate',
+    animation: 'hvr-rotate',
     img:
       'https://raw.githubusercontent.com/MohammedAl-Rowad/sequelize-youtube/master/sequelize.png',
     link:
@@ -58,19 +58,19 @@ const info2 = [
 const info3 = [
   {
     name: 'Hapi',
-    animation: 'hvr-wobble-top',
+    animation: 'hvr-rotate',
     img:
       'https://raw.githubusercontent.com/MohammedAl-Rowad/hapi_yt/master/Hapi.png',
     link:
       'https://www.youtube.com/playlist?list=PLM0LBHjz37LVV3AjmeX0oTdKYOcmDTnog',
   },
   {
-    name: 'PonyORM',
-    animation: 'hvr-grow-rotate',
+    name: 'redux toolkit',
+    animation: 'hvr-rotate',
     img:
-      'https://raw.githubusercontent.com/MohammedAl-Rowad/PonyORM_yt/master/PonyORM.png',
+      'https://raw.githubusercontent.com/MohammedAl-Rowad/react-redux-toolkit-yt/main/thumb.png',
     link:
-      'https://www.youtube.com/playlist?list=PLM0LBHjz37LXPeEjSuumB4g4JFCsTwNgn',
+      'https://www.youtube.com/playlist?list=PLM0LBHjz37LXSASzEv81f3tGptAsEGQUM',
   },
   {
     name: 'Gulp 4',
@@ -84,7 +84,7 @@ const info3 = [
 const info4 = [
   {
     name: 'createEntityAdapter',
-    animation: 'hvr-grow-rotate',
+    animation: 'hvr-rotate',
     img:
       'https://raw.githubusercontent.com/MohammedAl-Rowad/redux-toolkit-adapters-and-thunks/main/thumb.png',
     link:
@@ -92,7 +92,7 @@ const info4 = [
   },
   {
     name: 'Nestjs',
-    animation: 'hvr-wobble-top',
+    animation: 'hvr-rotate',
     img:
       'https://raw.githubusercontent.com/MohammedAl-Rowad/NestJs-youtube/master/Nest_js.png',
     link:
@@ -100,7 +100,7 @@ const info4 = [
   },
   {
     name: 'react & redux',
-    animation: 'hvr-wobble-top',
+    animation: 'hvr-rotate',
     img:
       'https://raw.githubusercontent.com/MohammedAl-Rowad/react-redux-yt/master/thumb.png',
     link:
