@@ -7,7 +7,7 @@ const disaplyAbout = () => html`
   <div class="row p">
     <h1 class="center">
       <i class="fas fa-address-card icon-header"></i>
-      <span class="shadow">About</span>
+      <span>About</span>
       <i class="fas fa-address-card icon-header"></i>
     </h1>
     <div class="flex-container p">

@@ -7,8 +7,7 @@ const icons = [
   { icon: 'github', link: 'https://github.com/MohammedAl-Rowad' },
   {
     icon: 'youtube',
-    link:
-      'https://www.youtube.com/channel/UC1Uw_GN4sodGisimwZNzMoA?view_as=subscriber',
+    link: 'https://www.youtube.com/channel/UC1Uw_GN4sodGisimwZNzMoA?view_as=subscriber',
   },
   {
     icon: 'stack-overflow',
@@ -59,12 +58,10 @@ const disaplyLinks = () => html`
   <div class="row p">
     <h1 class="center">
       <i class="fas fa-link icon-header"></i>
-      <span class="shadow">Links</span>
+      <span>Links</span>
       <i class="fas fa-link icon-header"></i>
     </h1>
-    <div class="flex-container p">
-      ${links}
-    </div>
+    <div class="flex-container p">${links}</div>
   </div>
 `
 render(disaplyLinks(), linksSection)

@@ -8,7 +8,10 @@ const info = [
     about: 'Nodejs - express - TypeScript framework with simple cli generator',
     ul: [
       { name: 'TypeORM', link: 'https://typeorm.io/#/' },
-      { name: 'Routing Controllers', link: 'https://github.com/typestack/routing-controllers' },
+      {
+        name: 'Routing Controllers',
+        link: 'https://github.com/typestack/routing-controllers',
+      },
       { name: 'Typedi', link: 'https://github.com/typestack/typedi' },
       { name: 'Video', link: 'https://www.youtube.com/watch?v=gd95R18BwJw' },
     ],
@@ -80,12 +83,10 @@ const disaplySelectedProjects = () => html`
   <div class="row">
     <h1 class="center">
       <i class="far fa-sun icon-header"></i>
-      <span class="shadow">Some Selected Projects</span>
+      <span>Some Selected Projects</span>
       <i class="far fa-sun icon-header"></i>
     </h1>
-    <div class="flex-container p">
-      ${infoHTML}
-    </div>
+    <div class="flex-container p">${infoHTML}</div>
   </div>
 `
 
