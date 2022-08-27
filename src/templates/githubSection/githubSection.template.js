@@ -25,7 +25,7 @@ const displayGitHubSection = () => html`
 render(displayGitHubSection(), gitHubSection)
 ;(async () => {
   const data = await fetch(
-    'https://api.github.com/users/MohammedAl-rowad/repos?per_page=1000'
+    'https://api.github.com/users/Rowadz/repos?per_page=1000'
   ).then((res) => res.json())
   // createActiveReposCharts(data);
   createReposByYears(data)

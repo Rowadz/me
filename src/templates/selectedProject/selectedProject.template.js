@@ -4,7 +4,7 @@ const selectedProjectsSection = document.getElementById('selected-projects')
 const info = [
   {
     name: 'Erela',
-    link: 'https://github.com/MohammedAl-Rowad/Erela',
+    link: 'https://github.com/Rowadz/Erela',
     about: 'Nodejs - express - TypeScript framework with simple cli generator',
     ul: [
       { name: 'TypeORM', link: 'https://typeorm.io/#/' },
@@ -18,7 +18,7 @@ const info = [
   },
   {
     name: 'Vexpest',
-    link: 'https://mohammedal-rowad.github.io/vexpest_V2/',
+    link: 'https://Rowadz.github.io/vexpest_V2/',
     about:
       'React app that creates a dashboard based on your GitHub public data',
     ul: [
@@ -33,7 +33,7 @@ const info = [
   },
   {
     name: 'AReS',
-    link: 'https://github.com/MohammedAl-Rowad/AReS',
+    link: 'https://github.com/Rowadz/AReS',
     about: 'Explorer tool utilizing Dublin Core and CG Core metadata schemas',
     ul: [
       { name: 'Angular', link: 'https://angular.io/' },
@@ -47,7 +47,7 @@ const info = [
   },
   {
     name: 'Pollux',
-    link: 'https://mohammedal-rowad.github.io/pollux',
+    link: 'https://Rowadz.github.io/pollux',
     about:
       'React/Redux app that generates fake data based on prototypes you define',
     ul: [

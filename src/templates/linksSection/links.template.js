@@ -4,7 +4,7 @@ import { checkIfMobile } from '../../helpers/helper'
 const linksSection = document.getElementById('links')
 const icons = [
   { icon: 'linkedin', link: 'https://www.linkedin.com/in/mohammed-al-rowad/' },
-  { icon: 'github', link: 'https://github.com/MohammedAl-Rowad' },
+  { icon: 'github', link: 'https://github.com/Rowadz' },
   {
     icon: 'youtube',
     link: 'https://www.youtube.com/channel/UC1Uw_GN4sodGisimwZNzMoA?view_as=subscriber',

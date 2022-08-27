@@ -6,19 +6,19 @@ const info = [
   {
     name: 'createAsyncThunk',
     animation: 'hvr-rotate',
-    img: 'https://raw.githubusercontent.com/MohammedAl-Rowad/in-depth-create-async-thunk/main/thumb.png',
+    img: 'https://raw.githubusercontent.com/Rowadz/in-depth-create-async-thunk/main/thumb.png',
     link: 'https://www.youtube.com/playlist?list=PLM0LBHjz37LW_Wz3DPoT5-bm1btrBD1bu',
   },
   {
     name: 'Django',
     animation: 'hvr-rotate',
-    img: 'https://raw.githubusercontent.com/MohammedAl-Rowad/django-react-yt/main/new-thumb.png',
+    img: 'https://raw.githubusercontent.com/Rowadz/django-react-yt/main/new-thumb.png',
     link: 'https://youtube.com/playlist?list=PLM0LBHjz37LU_XA4TX_H0chJ1OgEOHpJ3',
   },
   {
     name: 'RxDB',
     animation: 'hvr-rotate',
-    img: 'https://raw.githubusercontent.com/MohammedAl-Rowad/RxDB-real-time-node-yt/master/thumb.png',
+    img: 'https://raw.githubusercontent.com/Rowadz/RxDB-real-time-node-yt/master/thumb.png',
     link: 'https://www.youtube.com/playlist?list=PLM0LBHjz37LUrdnzOyJLci-ojYAGYvQdh',
   },
 ]
@@ -26,19 +26,19 @@ const info2 = [
   {
     name: 'TypeORM',
     animation: 'hvr-rotate',
-    img: 'https://raw.githubusercontent.com/MohammedAl-Rowad/typeorm_yt/master/typeorm.png',
+    img: 'https://raw.githubusercontent.com/Rowadz/typeorm_yt/master/typeorm.png',
     link: 'https://www.youtube.com/playlist?list=PLM0LBHjz37LVtZY-DG0OrZzZkkRtWGR6B',
   },
   {
     name: 'Koa',
     animation: 'hvr-rotate',
-    img: 'https://raw.githubusercontent.com/MohammedAl-Rowad/koa-ts-yt/master/koa.png',
+    img: 'https://raw.githubusercontent.com/Rowadz/koa-ts-yt/master/koa.png',
     link: 'https://www.youtube.com/playlist?list=PLM0LBHjz37LV8imdUyP2uo-Ep54uIt-V0',
   },
   {
     name: 'Sequelize',
     animation: 'hvr-rotate',
-    img: 'https://raw.githubusercontent.com/MohammedAl-Rowad/sequelize-youtube/master/sequelize.png',
+    img: 'https://raw.githubusercontent.com/Rowadz/sequelize-youtube/master/sequelize.png',
     link: 'https://www.youtube.com/playlist?list=PLM0LBHjz37LWu38VSaB2Ubz8AHfo8q6uM',
   },
 ]
@@ -47,19 +47,19 @@ const info3 = [
   {
     name: 'Hapi',
     animation: 'hvr-rotate',
-    img: 'https://raw.githubusercontent.com/MohammedAl-Rowad/hapi_yt/master/Hapi.png',
+    img: 'https://raw.githubusercontent.com/Rowadz/hapi_yt/master/Hapi.png',
     link: 'https://www.youtube.com/playlist?list=PLM0LBHjz37LVV3AjmeX0oTdKYOcmDTnog',
   },
   {
     name: 'redux toolkit',
     animation: 'hvr-rotate',
-    img: 'https://raw.githubusercontent.com/MohammedAl-Rowad/react-redux-toolkit-yt/main/thumb.png',
+    img: 'https://raw.githubusercontent.com/Rowadz/react-redux-toolkit-yt/main/thumb.png',
     link: 'https://www.youtube.com/playlist?list=PLM0LBHjz37LXSASzEv81f3tGptAsEGQUM',
   },
   {
     name: 'Gulp 4',
     animation: 'hvr-rotate',
-    img: 'https://raw.githubusercontent.com/MohammedAl-Rowad/gulp-4-yt/master/thumb.png',
+    img: 'https://raw.githubusercontent.com/Rowadz/gulp-4-yt/master/thumb.png',
     link: 'https://www.youtube.com/playlist?list=PLM0LBHjz37LVNapdMeupY-SevP4TrgVxZ',
   },
 ]
@@ -67,19 +67,19 @@ const info4 = [
   {
     name: 'createEntityAdapter',
     animation: 'hvr-rotate',
-    img: 'https://raw.githubusercontent.com/MohammedAl-Rowad/redux-toolkit-adapters-and-thunks/main/thumb.png',
+    img: 'https://raw.githubusercontent.com/Rowadz/redux-toolkit-adapters-and-thunks/main/thumb.png',
     link: 'https://www.youtube.com/playlist?list=PLM0LBHjz37LW0zVaEjpeCmw-WgglfXWnI',
   },
   {
     name: 'Nestjs',
     animation: 'hvr-rotate',
-    img: 'https://raw.githubusercontent.com/MohammedAl-Rowad/NestJs-youtube/master/Nest_js.png',
+    img: 'https://raw.githubusercontent.com/Rowadz/NestJs-youtube/master/Nest_js.png',
     link: 'https://www.youtube.com/playlist?list=PLM0LBHjz37LVfT_McvhvKtRoVBk6riWEj',
   },
   {
     name: 'react & redux',
     animation: 'hvr-rotate',
-    img: 'https://raw.githubusercontent.com/MohammedAl-Rowad/react-redux-yt/master/thumb.png',
+    img: 'https://raw.githubusercontent.com/Rowadz/react-redux-yt/master/thumb.png',
     link: 'https://www.youtube.com/playlist?list=PLM0LBHjz37LU1l5XXp5oxF6khA5kwRHg_',
   },
 ]
