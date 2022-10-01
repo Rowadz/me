@@ -12,11 +12,7 @@ const disaplyAbout = () => html`
     </h1>
     <div class="flex-container p">
       <h5>
-        A full-stack software engineer who is located in Jordan and very
-        enthusiastic about open source software.
-        <br />
-        This page is my personal website where you can find links about me &
-        some of my projects.
+        A jack of all trades software engineer.
         <br />
         Contact me here -> <b>rowadwo@gmail.com</b>
       </h5>
