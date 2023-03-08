@@ -1,5 +1,5 @@
 import * as echarts from 'echarts'
-import 'echarts-wordcloud'
+// import 'echarts-wordcloud'
 import { checkIfMobile } from '../../helpers/helper'
 // dark-fresh-cut, dark-mushroom jazz
 import 'echarts/theme/dark-mushroom'

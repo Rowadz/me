@@ -1,6 +1,6 @@
-import * as echarts from 'echarts';
-import 'echarts-wordcloud';
-import 'echarts/theme/dark-mushroom';
+import * as echarts from 'echarts'
+// import 'echarts-wordcloud';
+import 'echarts/theme/dark-mushroom'
 const colors = [
   '#140826',
   '#F20732',
@@ -26,21 +26,21 @@ const colors = [
   '#D90D7D',
   '#730217',
   '#BF3B5E',
-];
+]
 export const createActiveReposCharts = (data) => {
   const mapWordcloudData = (data = []) =>
     data.map(({ name, html_url }) => ({
       name,
       value: 1,
       html_url,
-    }));
+    }))
   const chart = echarts.init(
     document.getElementById('active-repos-chart'),
     'dark-mushroom',
     {
       renderer: 'svg',
     }
-  );
+  )
   chart.setOption({
     backgroundColor: 'transparent',
     title: {
@@ -110,5 +110,5 @@ export const createActiveReposCharts = (data) => {
         data: mapWordcloudData(data),
       },
     ],
-  });
-};
+  })
+}

@@ -1,5 +1,5 @@
 import * as echarts from 'echarts'
-import 'echarts-wordcloud'
+// import 'echarts-wordcloud'
 // dark-fresh-cut
 import 'echarts/theme/dark-mushroom'
 import { sexyMainColor } from '../colorsHelper/colors.helper'

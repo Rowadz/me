@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
 module.exports = {
-    mode: 'development',
-    devtool: '#source-map',
-};
+  mode: 'development',
+  devtool: 'eval',
+}
