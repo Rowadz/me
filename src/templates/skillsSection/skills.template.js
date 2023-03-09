@@ -35,7 +35,7 @@ const icons = [
   { icon: 'sass', link: 'https://sass-lang.com/documentation/syntax' },
   { icon: 'linux', link: 'https://www.linux.org/' },
   { icon: 'ubuntu', link: 'https://ubuntu.com/' },
-  { icon: 'windows', link: 'https://www.microsoft.com/en-us/windows' },
+  // { icon: 'windows', link: 'https://www.microsoft.com/en-us/windows' },
   // { icon: 'slack', link: 'https://slack.com/' },
   // { icon: 'skype', link: 'https://www.skype.com/en/' },
   // { icon: 'facebook-square', link: 'https://developers.facebook.com/' },
@@ -51,11 +51,11 @@ if (checkIfMobile()) {
       <a href="${link}" target="_blank" class="hvr-bounce-out"
         ><i class="fab fa-${icon} custom-icon-size"></i
       ></a>
-      <a href="${icons[i + 1].link}" target="_blank" class="hvr-bounce-out"
-        ><i class="fab fa-${icons[i + 1].icon} custom-icon-size"></i
+      <a href="${icons[i + 1]?.link}" target="_blank" class="hvr-bounce-out"
+        ><i class="fab fa-${icons[i + 1]?.icon} custom-icon-size"></i
       ></a>
-      <a href="${icons[i + 2].link}" target="_blank" class="hvr-bounce-out"
-        ><i class="fab fa-${icons[i + 2].icon} custom-icon-size"></i
+      <a href="${icons[i + 2]?.link}" target="_blank" class="hvr-bounce-out"
+        ><i class="fab fa-${icons[i + 2]?.icon} custom-icon-size"></i
       ></a>
     </div>`
     skills.push(skill)
