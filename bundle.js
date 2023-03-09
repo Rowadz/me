@@ -27,15 +27,15 @@
     </h1>
     <div class="flex-container p">${U}</div>
   </div>
-`,B);const q=document.getElementById("skills"),W=[{icon:"js",link:"https://developer.mozilla.org/en-US/docs/Web/JavaScript"},{icon:"node",link:"https://nodejs.org/en/"},{icon:"python",link:"https://www.python.org/"},{icon:"dyalog",link:"https://www.djangoproject.com/"},{icon:"php",link:"https://www.php.net/"},{icon:"laravel",link:"https://laravel.com/"},{icon:"angular",link:"https://angular.io/"},{icon:"vuejs",link:"https://vuejs.org/"},{icon:"react",link:"https://reactjs.org/"},{icon:"aws",link:"https://aws.amazon.com/"},{icon:"docker",link:"https://www.docker.com/"},{icon:"git-alt",link:"https://git-scm.com/"},{icon:"bitbucket",link:"https://bitbucket.org/product"},{icon:"figma",link:"https://www.figma.com/"},{icon:"github-alt",link:"http://github.com/"},{icon:"gulp",link:"https://gulpjs.com/"},{icon:"jenkins",link:"https://www.jenkins.io/"},{icon:"jira",link:"https://www.atlassian.com/software/jira"},{icon:"sass",link:"https://sass-lang.com/documentation/syntax"},{icon:"linux",link:"https://www.linux.org/"},{icon:"ubuntu",link:"https://ubuntu.com/"},{icon:"windows",link:"https://www.microsoft.com/en-us/windows"}];let X=[];if(F())for(let e=0;e<W.length;e+=3){const{icon:t,link:n}=W[e],a=P`<div class="twelve columns center">
+`,B);const q=document.getElementById("skills"),W=[{icon:"js",link:"https://developer.mozilla.org/en-US/docs/Web/JavaScript"},{icon:"node",link:"https://nodejs.org/en/"},{icon:"python",link:"https://www.python.org/"},{icon:"dyalog",link:"https://www.djangoproject.com/"},{icon:"php",link:"https://www.php.net/"},{icon:"laravel",link:"https://laravel.com/"},{icon:"angular",link:"https://angular.io/"},{icon:"vuejs",link:"https://vuejs.org/"},{icon:"react",link:"https://reactjs.org/"},{icon:"aws",link:"https://aws.amazon.com/"},{icon:"docker",link:"https://www.docker.com/"},{icon:"git-alt",link:"https://git-scm.com/"},{icon:"bitbucket",link:"https://bitbucket.org/product"},{icon:"figma",link:"https://www.figma.com/"},{icon:"github-alt",link:"http://github.com/"},{icon:"gulp",link:"https://gulpjs.com/"},{icon:"jenkins",link:"https://www.jenkins.io/"},{icon:"jira",link:"https://www.atlassian.com/software/jira"},{icon:"sass",link:"https://sass-lang.com/documentation/syntax"},{icon:"linux",link:"https://www.linux.org/"},{icon:"ubuntu",link:"https://ubuntu.com/"}];let X=[];if(F())for(let e=0;e<W.length;e+=3){const{icon:t,link:n}=W[e],a=P`<div class="twelve columns center">
       <a href="${n}" target="_blank" class="hvr-bounce-out"
         ><i class="fab fa-${t} custom-icon-size"></i
       ></a>
-      <a href="${W[e+1].link}" target="_blank" class="hvr-bounce-out"
-        ><i class="fab fa-${W[e+1].icon} custom-icon-size"></i
+      <a href="${W[e+1]?.link}" target="_blank" class="hvr-bounce-out"
+        ><i class="fab fa-${W[e+1]?.icon} custom-icon-size"></i
       ></a>
-      <a href="${W[e+2].link}" target="_blank" class="hvr-bounce-out"
-        ><i class="fab fa-${W[e+2].icon} custom-icon-size"></i
+      <a href="${W[e+2]?.link}" target="_blank" class="hvr-bounce-out"
+        ><i class="fab fa-${W[e+2]?.icon} custom-icon-size"></i
       ></a>
     </div>`;X.push(a)}else X=W.map((({icon:e,link:t})=>P`<div class="one columns center">
       <a href="${t}" target="_blank" class="hvr-bounce-out"
