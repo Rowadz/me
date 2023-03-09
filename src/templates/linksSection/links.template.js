@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-free/js/all'
 import { checkIfMobile } from '../../helpers/helper'
 const linksSection = document.getElementById('links')
 const icons = [
-  { icon: 'linkedin', link: 'https://www.linkedin.com/in/mohammed-al-rowad/' },
+  { icon: 'linkedin', link: 'https://www.linkedin.com/in/rowadz/' },
   { icon: 'github', link: 'https://github.com/Rowadz' },
   {
     icon: 'youtube',
@@ -57,9 +57,9 @@ if (checkIfMobile()) {
 const disaplyLinks = () => html`
   <div class="row p">
     <h1 class="center">
-      <i class="fas fa-link icon-header"></i>
+      <!-- <i class="fas fa-link icon-header"></i> -->
       <span>Links</span>
-      <i class="fas fa-link icon-header"></i>
+      <!-- <i class="fas fa-link icon-header"></i> -->
     </h1>
     <div class="flex-container p">${links}</div>
   </div>

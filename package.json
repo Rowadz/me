@@ -2,9 +2,9 @@
   "name": "rowadz",
   "version": "2",
   "scripts": {
-    "dev": "webpack --mode development",
+    "build": "webpack --mode development",
     "dev:watch": "webpack serve --mode development",
-    "prod": "webpack --mode production"
+    "build:prod": "webpack --mode production"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

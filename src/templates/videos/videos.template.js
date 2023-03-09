@@ -91,7 +91,12 @@ const mapper = (data) =>
     >
       <h3>${name}</h3>
       <a href="${link}" target="_blank" rel="noopener noreferrer">
-        <img width="300" class="lazyload ${animation}" data-src="${img}" />
+        <img
+          loading="lazy"
+          width="300"
+          class="lazyload ${animation} img-yt"
+          data-src="${img}"
+        />
       </a>
     </div>`
   )

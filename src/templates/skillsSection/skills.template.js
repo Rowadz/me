@@ -73,9 +73,9 @@ if (checkIfMobile()) {
 const displaySkills = () => html`
   <div class="row p">
     <h1 class="center">
-      <i class="fas fa-hands icon-header"></i>
-      <span>Icons for some of the things that I worked with</span>
-      <i class="fas fa-hands icon-header"></i>
+      <!-- <i class="fas fa-hands icon-header"></i> !-->
+      <span>Some of the things that I worked with</span>
+      <!-- <i class="fas fa-hands icon-header"></i> !-->
     </h1>
     ${skills}
   </div>
