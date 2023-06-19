@@ -17,6 +17,17 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.(png|jpe?g|gif|webp)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+          {
+            loader: 'webp-loader',
+          },
+        ],
+      },
+      {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
