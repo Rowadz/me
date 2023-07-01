@@ -23,11 +23,17 @@ if (checkIfMobile()) {
     const { icon, link, preFix } = icons[i]
 
     const linkToDisplay = html`<div class="two columns rm-margin-left center">
-      <a href="${link}" target="_blank" class="hvr-bounce-out">
+      <a
+        aria-label="${icon}"
+        href="${link}"
+        target="_blank"
+        class="hvr-bounce-out"
+      >
         <i class="${preFix ? preFix : 'fab'} fa-${icon} custom-icon-size-2"></i>
       </a>
       ${icons[i + 1]
         ? html`<a
+            aria-label="${icons[i + 1].icon}"
             href="${icons[i + 1].link}"
             target="_blank"
             class="hvr-bounce-out"
@@ -47,7 +53,12 @@ if (checkIfMobile()) {
     ({ icon, link, preFix }) => html`<div
       class="two columns rm-margin-left center"
     >
-      <a href="${link}" target="_blank" class="hvr-bounce-out">
+      <a
+        aria-label="${icon}"
+        href="${link}"
+        target="_blank"
+        class="hvr-bounce-out"
+      >
         <i class="${preFix ? preFix : 'fab'} fa-${icon} fa-7x"></i>
       </a>
     </div>`

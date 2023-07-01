@@ -67,13 +67,15 @@ const infoHTML = info.map(
     class="center selected-projects three columns"
   >
     <h3>
-      <a href="${link}" target="_blank">${name}</a>
+      <a aria-label="${name}" href="${link}" target="_blank">${name}</a>
     </h3>
     <p><b>${about}</b></p>
     <ul>
       ${ul.map(
         ({ link, name }) =>
-          html`<li><a href="${link}" target="_blank">${name}</a></li>`
+          html`<li>
+            <a aria-label="${name}" href="${link}" target="_blank">${name}</a>
+          </li>`
       )}
     </ul>
   </div>`
