@@ -7,8 +7,6 @@ html {
   overflow-x: hidden !important;
   padding: 0;
   margin: 0;
-  // font-family: sans-serif !important;
-  font-family: 'Roboto Slab', serif !important;
   ::selection {
     color: $main-color;
     background-color: $sexy-blue;
@@ -66,7 +64,9 @@ html {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-.hvr-rotate:hover, .hvr-rotate:focus, .hvr-rotate:active {
+.hvr-rotate:hover,
+.hvr-rotate:focus,
+.hvr-rotate:active {
   -webkit-transform: rotate(4deg);
   transform: rotate(4deg);
 }
@@ -82,11 +82,12 @@ html {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-.hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+.hvr-grow-rotate:hover,
+.hvr-grow-rotate:focus,
+.hvr-grow-rotate:active {
   -webkit-transform: scale(1.1) rotate(4deg);
   transform: scale(1.1) rotate(4deg);
 }
-
 
 /* Wobble Top */
 @-webkit-keyframes hvr-wobble-top {
@@ -150,7 +151,9 @@ html {
   -webkit-transform-origin: 0 100%;
   transform-origin: 0 100%;
 }
-.hvr-wobble-top:hover, .hvr-wobble-top:focus, .hvr-wobble-top:active {
+.hvr-wobble-top:hover,
+.hvr-wobble-top:focus,
+.hvr-wobble-top:active {
   -webkit-animation-name: hvr-wobble-top;
   animation-name: hvr-wobble-top;
   -webkit-animation-duration: 1s;
@@ -160,7 +163,6 @@ html {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
-
 
 #github-data {
   .chart {
@@ -236,7 +238,6 @@ body::-webkit-scrollbar-thumb {
 .rm-margin-left {
   margin-left: 0 !important;
 }
-
 
 .img-yt {
   height: 170px;

@@ -90,8 +90,14 @@ const mapper = (data) =>
       class="center selected-projects three columns"
     >
       <h3>${name}</h3>
-      <a href="${link}" target="_blank" rel="noopener noreferrer">
+      <a
+        href="${link}"
+        target="_blank"
+        aria-label="Video for '${name}' in YouTube"
+        rel="noopener noreferrer"
+      >
         <img
+          alt="An image for the '${name}' video"
           loading="lazy"
           width="300"
           class="lazyload ${animation} img-yt"

@@ -22,10 +22,10 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "echarts": "^5.4.1",
+    "echarts": "^5.4.2",
     "lazyload": "^2.0.0-rc.2",
-    "lit-html": "^1.2.1",
-    "p5": "^1.0.0",
+    "lit-html": "^2.7.4",
+    "p5": "^1.6.0",
     "skeleton-css": "^2.0.4",
     "style-loader": "^1.2.1"
   }
