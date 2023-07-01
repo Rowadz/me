@@ -7,6 +7,9 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
+  optimization: {
+    usedExports: true,
+  },
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),
