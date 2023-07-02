@@ -38,7 +38,7 @@ export class Particle {
     // this.p5.stroke(31, 115, 52, 255)
     this.h++
     if (this.h > 255) {
-      this.h = 0
+      this.h = 100
     }
     this.p5.strokeWeight(1)
     this.p5.line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y)
