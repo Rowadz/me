@@ -1,7 +1,7 @@
 import * as echarts from 'echarts'
 // import 'echarts-wordcloud'
 // dark-fresh-cut
-import 'echarts/theme/dark-mushroom'
+import 'echarts/theme/eduardo'
 import { sexyMainColor } from '../colorsHelper/colors.helper'
 const mapToArea = (data) => {
   const set = new Set()
@@ -20,7 +20,7 @@ export const createReposByYears = (data) => {
   const { dataToViz, years } = mapToArea(data)
   const chart = echarts.init(
     document.getElementById('repos-by-years'),
-    'dark-mushroom',
+    'eduardo',
     {
       renderer: 'svg',
     }
@@ -75,7 +75,7 @@ export const createReposByYears = (data) => {
         type: 'line',
         smooth: true,
         areaStyle: { color: sexyMainColor },
-        // lineStyle: { color: '#a41304' },
+        lineStyle: { color: 'black' },
         itemStyle: {
           color: sexyMainColor,
         },
