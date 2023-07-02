@@ -68,10 +68,10 @@ export const createStarsByRepChart = (data) => {
     },
     legend: {
       type: 'scroll',
-      show: checkIfMobile(),
+      show: true,
       orient: 'horizontal',
-      right: checkIfMobile() ? null : 10,
-      top: checkIfMobile() ? null : 20,
+      right: null,
+      top: null,
       bottom: 20,
       textStyle: {
         color: '#fff',
@@ -79,12 +79,13 @@ export const createStarsByRepChart = (data) => {
       data: data.legendData,
       selected: data.selected,
       pageTextStyle: {
-        fontFamily: 'Roboto Slab, serif',
+        fontFamily: 'serif',
       },
     },
     textStyle: {
-      color: '#fff',
-      fontFamily: 'Roboto Slab, serif',
+      color: sexyMainColor,
+      fontSize: 20,
+      overflow: 'truncate',
     },
     series: [
       {
@@ -96,7 +97,7 @@ export const createStarsByRepChart = (data) => {
         type: 'pie',
         smooth: true,
         label: {
-          show: !checkIfMobile(),
+          show: false,
         },
         radius: checkIfMobile() ? '100%' : '75%',
         // center: ['40%', '50%'],
@@ -108,6 +109,9 @@ export const createStarsByRepChart = (data) => {
           )
           .slice(0, 10),
         roseType: 'area',
+        itemStyle: {
+          borderRadius: 50,
+        },
         emphasis: {
           itemStyle: {
             shadowBlur: 10,
