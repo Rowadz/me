@@ -2,13 +2,18 @@
 
 body,
 html {
-  background-color: $main-bg;
-  color: $main-color !important;
+  .row {
+    background-color: whitesmoke;
+    color: $main-color black !important;
+  }
+  background-color: whitesmoke;
+  // background-color: $main-bg;
+  // color: $main-color !important;
   overflow-x: hidden !important;
   padding: 0;
   margin: 0;
   ::selection {
-    color: $main-color;
+    // color: $main-color;
     background-color: $sexy-blue;
   }
   a {
