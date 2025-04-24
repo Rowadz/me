@@ -126,7 +126,14 @@
     </h1>
     <div class="flex-container p">
       <h5>
-        A jack of all trades software engineer.
+                I’m an engineer focused on building and scaling APIs and infrastructure that serve billions of requests every day. 
+         <br />
+        I lead projects end-to-end, from discovery, system design and cross team collaboration to development and deployment, while staying hands-on with performance tuning, CDN optimization, caching strategies, and code improvements. 
+         <br />
+        I prioritize observability and reliability, ensuring our systems are resilient and efficient at scale. 
+        
+        <br />
+        As part of the on-call team (available 24/7), I handle high-pressure incidents, lead response efforts, and drive long-term fixes through postmortems and system improvements.
         <br />
         Contact me here -> <b>rowadwo@gmail.com</b>
       </h5>
