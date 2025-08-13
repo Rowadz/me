@@ -4,7 +4,26 @@ $main-2: #737373;
 $sexy-red: #a41304;
 $sexy-blue: #6d5590;
 
+/* CSS variables for theming */
+:root {
+  --main-bg: #ffffff;
+  --main-color: #0e0e0e;
+  --accent: #6d5590;
+  --scrollbarBG: var(--main-bg);
+  --thumbBG: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg: #0e0e0e;
+    --main-color: #f3f2f0;
+    --accent: #6d5590;
+    --scrollbarBG: var(--main-bg);
+    --thumbBG: var(--accent);
+  }
+}
+
 :export {
-    mainBg: $main-bg;
-    mainColor: $main-color;
+  mainBg: var(--main-bg);
+  mainColor: var(--main-color);
 }

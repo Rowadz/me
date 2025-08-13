@@ -18,9 +18,13 @@ const mapToArea = (data) => {
 
 export const createReposByYears = (data) => {
   const { dataToViz, years } = mapToArea(data)
+  const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const rootStyles = getComputedStyle(document.documentElement)
+  const mainColor = rootStyles.getPropertyValue('--main-color').trim() || (isDark ? '#f3f2f0' : '#0e0e0e')
+
   const chart = echarts.init(
     document.getElementById('repos-by-years'),
-    'dark-mushroom',
+    isDark ? 'dark-mushroom' : undefined,
     {
       renderer: 'svg',
     }
@@ -32,6 +36,7 @@ export const createReposByYears = (data) => {
       left: 'center',
       textStyle: {
         fontFamily: 'Roboto Slab, serif',
+        color: mainColor,
       },
     },
     tooltip: {
@@ -58,6 +63,12 @@ export const createReposByYears = (data) => {
       nameTextStyle: {
         fontFamily: 'Roboto Slab, serif',
       },
+      axisLabel: {
+        color: mainColor,
+      },
+      axisLine: {
+        lineStyle: { color: mainColor },
+      },
     },
     yAxis: {
       type: 'value',
@@ -67,6 +78,12 @@ export const createReposByYears = (data) => {
       },
       nameTextStyle: {
         fontFamily: 'Roboto Slab, serif',
+      },
+      axisLabel: {
+        color: mainColor,
+      },
+      axisLine: {
+        lineStyle: { color: mainColor },
       },
     },
     series: [

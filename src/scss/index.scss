@@ -2,14 +2,14 @@
 
 body,
 html {
-  background-color: $main-bg;
-  color: $main-color !important;
+  background-color: var(--main-bg);
+  color: var(--main-color) !important;
   overflow-x: hidden !important;
   padding: 0;
   margin: 0;
   ::selection {
-    color: $main-color;
-    background-color: $sexy-blue;
+    color: var(--main-color);
+    background-color: var(--accent);
   }
   a {
     text-decoration: none;
@@ -39,16 +39,20 @@ html {
   max-width: 100vw;
   h1 {
     z-index: 1;
+    color: var(--main-color) !important;
+    strong {
+      color: var(--main-color) !important;
+    }
   }
 }
 
 .info,
 #skills {
-  background-color: $main-bg;
+  background-color: var(--main-bg);
   a {
-    color: $sexy-blue !important;
+    color: var(--accent) !important;
     &:hover {
-      color: $main-color !important;
+      color: var(--main-color) !important;
     }
   }
 }
@@ -210,8 +214,8 @@ html {
 }
 
 html {
-  --scrollbarBG: #0e0e0e;
-  --thumbBG: #6d5590;
+  --scrollbarBG: var(--main-bg);
+  --thumbBG: var(--accent);
 }
 body::-webkit-scrollbar {
   width: 11px;

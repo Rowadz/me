@@ -14,9 +14,17 @@ const mapPieData = (data = []) =>
     .filter(({ value }) => value > 0)
 
 export const createStarsByRepChart = (data) => {
+  const isDark =
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  const rootStyles = getComputedStyle(document.documentElement)
+  const mainColor =
+    rootStyles.getPropertyValue('--main-color').trim() ||
+    (isDark ? '#f3f2f0' : '#0e0e0e')
+
   const chart = echarts.init(
     document.getElementById('stars-by-repos'),
-    'dark-mushroom',
+    isDark ? 'dark-mushroom' : undefined,
     null,
     {
       renderer: 'svg',
@@ -59,6 +67,7 @@ export const createStarsByRepChart = (data) => {
       left: 'center',
       textStyle: {
         fontFamily: 'Roboto Slab, serif',
+        color: mainColor,
       },
     },
     tooltip: {
@@ -74,7 +83,7 @@ export const createStarsByRepChart = (data) => {
       top: null,
       bottom: 20,
       textStyle: {
-        color: '#fff',
+        color: mainColor,
       },
       data: data.legendData,
       selected: data.selected,
@@ -83,14 +92,14 @@ export const createStarsByRepChart = (data) => {
       },
     },
     textStyle: {
-      color: sexyMainColor,
+      color: mainColor,
       fontSize: 20,
       overflow: 'truncate',
     },
     series: [
       {
         title: {
-          color: '#fff',
+          color: mainColor,
         },
         isBiggerOrEqual: true,
         // name: 'Stars:',

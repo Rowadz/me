@@ -14,9 +14,33 @@ let s = (sk) => {
   sk.setup = () => {
     const { innerHeight, innerWidth } = window
     const canves = sk.createCanvas(innerWidth, innerHeight)
-    sk.background(sexyBlack)
+    // Resolve CSS variable for background so p5 matches theme
+    const rootStyles = getComputedStyle(document.documentElement)
+    const mainBg = rootStyles.getPropertyValue('--main-bg').trim() || sexyBlack
+    sk.background(mainBg)
     canves.position(0, 0)
     // canves.style('z-index', '-1');
+
+    // Dynamically update background on theme change (guard to avoid duplicates)
+    if (!sk._themeListenerAdded) {
+      const applyThemeBg = () => {
+        const rs = getComputedStyle(document.documentElement)
+        const bg = rs.getPropertyValue('--main-bg').trim() || sexyBlack
+        sk.clear()
+        sk.background(bg)
+      }
+      const mql =
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')
+      if (mql) {
+        if (mql.addEventListener) {
+          mql.addEventListener('change', applyThemeBg)
+        } else if (mql.addListener) {
+          mql.addListener(applyThemeBg)
+        }
+      }
+      sk._themeListenerAdded = true
+    }
+
     cols = sk.floor(innerWidth / scl)
     rows = sk.floor(innerHeight / scl)
     flowfield = new Array(cols * rows)

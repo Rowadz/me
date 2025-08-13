@@ -33,9 +33,23 @@ export class Particle {
     this.acc.add(force)
   }
   show() {
-    this.p5.stroke(this.h / 1.5, this.h / 3, this.h, 255)
-    // rgb(109, 85, 144)
-    // this.p5.stroke(31, 115, 52, 255)
+    const isDark =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+
+    let r = this.h / 1.5
+    let g = this.h / 3
+    let b = this.h
+
+    if (!isDark) {
+      const minChannel = 50
+      r = Math.max(r, minChannel)
+      g = Math.max(g, minChannel)
+      b = Math.max(b, minChannel)
+    }
+
+    this.p5.stroke(r, g, b, 255)
     this.h++
     if (this.h > 255) {
       this.h = 0
