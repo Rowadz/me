@@ -4,3 +4,9 @@
  */
 
 /*! p5.js v1.6.0 February 22, 2023 */
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
