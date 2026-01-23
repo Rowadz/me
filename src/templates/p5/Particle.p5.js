@@ -15,16 +15,27 @@ onAccentColorChange((color) => {
 let isArabicText = getCurrentNameText().isArabic
 onNameTextChange(({ isArabic }) => {
   isArabicText = isArabic
-  // Update mask after typewriter animation completes
-  // "Rowadz" = 6 chars * 80ms + erase time + buffer = ~1500ms
-  // Arabic text is shorter, but we use the same delay for consistency
-  setTimeout(updateTextMask, 1500)
 })
 
 // Circular text mask zone - particles fade out as they approach
 let textMask = null
-const FADE_ZONE_NORMAL = 60
-const FADE_ZONE_ARABIC = 30
+const FADE_ZONE = 50
+const MOBILE_BREAKPOINT = 768
+// Desktop sizes
+const FIXED_RADIUS_ENGLISH = 120
+const FIXED_RADIUS_ARABIC = 80
+// Mobile sizes (smaller to match 2.5em font)
+const FIXED_RADIUS_ENGLISH_MOBILE = 75
+const FIXED_RADIUS_ARABIC_MOBILE = 50
+
+const getRadius = () => {
+  const isMobile = window.innerWidth <= MOBILE_BREAKPOINT
+  if (isArabicText) {
+    return isMobile ? FIXED_RADIUS_ARABIC_MOBILE : FIXED_RADIUS_ARABIC
+  }
+  return isMobile ? FIXED_RADIUS_ENGLISH_MOBILE : FIXED_RADIUS_ENGLISH
+}
+
 const updateTextMask = () => {
   const h1 = document.querySelector('#main h1')
   if (h1) {
@@ -32,19 +43,13 @@ const updateTextMask = () => {
     // Add scroll offset to convert viewport coords to page coords
     const scrollX = window.scrollX || window.pageXOffset
     const scrollY = window.scrollY || window.pageYOffset
-    // Calculate center and radius for circular mask
+    // Calculate center for circular mask
     const centerX = rect.left + scrollX + rect.width / 2
     const centerY = rect.top + scrollY + rect.height / 2
-    // For English text (wider), use diagonal distance to ensure corners are covered
-    // For Arabic text (more square), use larger dimension
-    const padding = isArabicText ? 25 : 50
-    const radius = isArabicText
-      ? Math.max(rect.width, rect.height) / 2 + padding
-      : Math.sqrt(rect.width * rect.width + rect.height * rect.height) / 2 + padding
     textMask = {
       centerX,
       centerY,
-      radius,
+      radius: getRadius(),
     }
   }
 }
@@ -60,9 +65,6 @@ if (typeof window !== 'undefined') {
 const getTextMaskOpacity = (x, y) => {
   if (!textMask) return 1
 
-  // Use smaller fade zone for Arabic text
-  const fadeZone = isArabicText ? FADE_ZONE_ARABIC : FADE_ZONE_NORMAL
-
   // Calculate distance from point to center of circle
   const dx = x - textMask.centerX
   const dy = y - textMask.centerY
@@ -77,8 +79,8 @@ const getTextMaskOpacity = (x, y) => {
   const distanceFromEdge = distanceFromCenter - textMask.radius
 
   // In the fade zone
-  if (distanceFromEdge < fadeZone) {
-    return distanceFromEdge / fadeZone
+  if (distanceFromEdge < FADE_ZONE) {
+    return distanceFromEdge / FADE_ZONE
   }
 
   // Fully outside
