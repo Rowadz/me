@@ -11,8 +11,12 @@ let s = (sk) => {
     flowfield = [],
     inc = 0.1,
     particles = []
+  // Track width to detect real resizes vs mobile scroll (height-only changes)
+  let lastWidth = window.innerWidth
+
   sk.setup = () => {
     const { innerHeight, innerWidth } = window
+    lastWidth = innerWidth
     const canves = sk.createCanvas(innerWidth, innerHeight)
     // Resolve CSS variable for background so p5 matches theme
     const rootStyles = getComputedStyle(document.documentElement)
@@ -81,12 +85,11 @@ let s = (sk) => {
     }
   }
   sk.windowResized = () => {
-    try {
-      const { windowHeight, windowWidth } = sk
-      // sk.resizeCanvas(windowWidth, windowHeight, false)
+    const { innerWidth } = window
+    // Only reinitialize if width changed (ignore height changes from mobile address bar)
+    if (innerWidth !== lastWidth) {
+      lastWidth = innerWidth
       sk.setup()
-    } catch (error) {
-      console.log(error)
     }
   }
 }
