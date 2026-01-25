@@ -1,7 +1,6 @@
 import {
   getCurrentAccentColor,
   onAccentColorChange,
-  getCurrentNameText,
   onNameTextChange,
 } from '../colorsHelper/colors.helper'
 
@@ -11,79 +10,56 @@ onAccentColorChange((color) => {
   currentAccent = color
 })
 
-// Track if current text is Arabic
-let isArabicText = getCurrentNameText().isArabic
-onNameTextChange(({ isArabic }) => {
-  isArabicText = isArabic
-})
-
-// Circular text mask zone - particles fade out as they approach
-let textMask = null
+// Single mask for text - both English and Arabic use same size now
+let mask = null
 const FADE_ZONE = 50
 const MOBILE_BREAKPOINT = 768
-// Desktop sizes
-const FIXED_RADIUS_ENGLISH = 120
-const FIXED_RADIUS_ARABIC = 80
-// Mobile sizes (smaller to match 2.5em font)
-const FIXED_RADIUS_ENGLISH_MOBILE = 75
-const FIXED_RADIUS_ARABIC_MOBILE = 50
+const RADIUS = 120
+const RADIUS_MOBILE = 75
 
-const getRadius = () => {
-  const isMobile = window.innerWidth <= MOBILE_BREAKPOINT
-  if (isArabicText) {
-    return isMobile ? FIXED_RADIUS_ARABIC_MOBILE : FIXED_RADIUS_ARABIC
-  }
-  return isMobile ? FIXED_RADIUS_ENGLISH_MOBILE : FIXED_RADIUS_ENGLISH
-}
+const updateMask = () => {
+  const h1English = document.querySelector('#name-english')
+  const h1Arabic = document.querySelector('#name-arabic')
+  const visibleH1 = (h1English && h1English.style.display !== 'none') ? h1English : h1Arabic
 
-const updateTextMask = () => {
-  const h1 = document.querySelector('#main h1')
-  if (h1) {
-    const rect = h1.getBoundingClientRect()
-    // Add scroll offset to convert viewport coords to page coords
-    const scrollX = window.scrollX || window.pageXOffset
-    const scrollY = window.scrollY || window.pageYOffset
-    // Calculate center for circular mask
-    const centerX = rect.left + scrollX + rect.width / 2
-    const centerY = rect.top + scrollY + rect.height / 2
-    textMask = {
-      centerX,
-      centerY,
-      radius: getRadius(),
+  if (visibleH1) {
+    const rect = visibleH1.getBoundingClientRect()
+    const isMobile = window.innerWidth <= MOBILE_BREAKPOINT
+
+    mask = {
+      centerX: rect.left + rect.width / 2,
+      centerY: rect.top + rect.height / 2,
+      radius: isMobile ? RADIUS_MOBILE : RADIUS,
     }
   }
 }
-// Update on load and resize
+
+// Update mask on load, resize, and text change
 if (typeof window !== 'undefined') {
-  window.addEventListener('load', updateTextMask)
-  window.addEventListener('resize', updateTextMask)
-  // Initial update after a short delay to ensure DOM is ready
-  setTimeout(updateTextMask, 100)
+  window.addEventListener('load', updateMask)
+  window.addEventListener('resize', updateMask)
+  onNameTextChange(() => setTimeout(updateMask, 50)) // Small delay to let DOM update
+  setTimeout(updateMask, 100)
 }
 
-// Returns 0 if inside circular mask, 1 if fully outside fade zone, or a value between for fading
+// Returns 0 if inside mask, 1 if fully outside, or fade value in between
 const getTextMaskOpacity = (x, y) => {
-  if (!textMask) return 1
+  if (!mask) return 1
 
-  // Calculate distance from point to center of circle
-  const dx = x - textMask.centerX
-  const dy = y - textMask.centerY
+  const dx = x - mask.centerX
+  const dy = y - mask.centerY
   const distanceFromCenter = Math.sqrt(dx * dx + dy * dy)
 
-  // Inside the circular mask
-  if (distanceFromCenter <= textMask.radius) {
+  if (distanceFromCenter <= mask.radius) {
     return 0
   }
 
-  // Distance from the circle edge
-  const distanceFromEdge = distanceFromCenter - textMask.radius
+  const distanceFromEdge = distanceFromCenter - mask.radius
 
-  // In the fade zone
   if (distanceFromEdge < FADE_ZONE) {
     return distanceFromEdge / FADE_ZONE
   }
 
-  // Fully outside
   return 1
 }
 
@@ -122,13 +98,11 @@ export class Particle {
     this.acc.add(force)
   }
   show() {
-    // Get opacity based on distance to text mask (0 = inside, 1 = fully outside)
     const opacity = Math.min(
       getTextMaskOpacity(this.pos.x, this.pos.y),
       getTextMaskOpacity(this.prevPos.x, this.prevPos.y)
     )
 
-    // Skip drawing if fully inside the mask
     if (opacity === 0) {
       this.h++
       if (this.h > 255) {
@@ -143,7 +117,6 @@ export class Particle {
       window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches
 
-    // Use current accent color, scaled by h for the fade effect
     const { rgb } = currentAccent
     const scale = this.h / 255
     let r = rgb.r * scale
@@ -157,7 +130,6 @@ export class Particle {
       b = Math.max(b, minChannel)
     }
 
-    // Apply fade based on proximity to text
     const alpha = 255 * opacity
     this.p5.stroke(r, g, b, alpha)
     this.h++

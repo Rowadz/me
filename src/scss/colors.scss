@@ -1,23 +1,41 @@
-$main-bg: #0e0e0e;
-$main-color: #f3f2f0;
+// =============================================================================
+// THEME COLORS - Keep in sync with colors.helper.js THEME config
+// =============================================================================
+
+// Dark theme (default for this portfolio)
+$dark-bg: #1a1b1f;        // charcoal
+$dark-text: #f3f2f0;      // off-white
+
+// Light theme
+$light-bg: #fafafa;       // soft white
+$light-text: #1a1b1f;     // charcoal
+
+// Accent colors - moody/modern/sci-fi palette
+$accent-primary: #6d5590;   // muted purple (main)
+$accent-secondary: #e63946; // vibrant coral red
+$accent-tertiary: #4cc9f0;  // electric cyan
+
+// Legacy variables (for backwards compatibility)
+$main-bg: $dark-bg;
+$main-color: $dark-text;
 $main-2: #737373;
-$sexy-red: #a41304;
-$sexy-blue: #6d5590;
+$sexy-red: $accent-secondary;
+$sexy-blue: $accent-primary;
 
 /* CSS variables for theming */
 :root {
-  --main-bg: #ffffff;
-  --main-color: #0e0e0e;
-  --accent: #6d5590;
+  --main-bg: #{$light-bg};
+  --main-color: #{$light-text};
+  --accent: #{$accent-primary};
   --scrollbarBG: var(--main-bg);
   --thumbBG: var(--accent);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-bg: #0e0e0e;
-    --main-color: #f3f2f0;
-    --accent: #6d5590;
+    --main-bg: #{$dark-bg};
+    --main-color: #{$dark-text};
+    --accent: #{$accent-primary};
     --scrollbarBG: var(--main-bg);
     --thumbBG: var(--accent);
   }
